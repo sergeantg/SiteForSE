@@ -5,7 +5,6 @@
   <head>
     
    <meta charset="utf-8" />
-    <title>Mentor - Premium Responsive Business HTML5 Template by Pixelentity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -29,9 +28,21 @@
   
   <body>
     <%@include file="header.jsp" %>
+    
     <!--main content-->
     <section class="mainContentWrap">
+    <div class="container mainContent">
+      <ul class="breadcrumb">
+	    <li>
+	    <a href="#">关于</a> <span class="divider">/</span>
+	    </li>
+	    <li>
+	    <a href="teacherIntro.jsp">教师介绍</a> <span class="divider">/</span>
+	    </li>
+	  </ul>
+	  </div>
       <div class="container mainContent">
+      
         <div class="row-fluid">
           
           

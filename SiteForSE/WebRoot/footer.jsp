@@ -14,11 +14,11 @@
 						<div class="span3 copyright"><p>&copy; 2014+ SiteForSE</p></div>
 						
 						<div class="span6 footNav">
-							<a class="first" href="index.html">Home</a><span>&#124;</span>
-							<a href="full_width.html">Pages</a><span>&#124;</span>
-							<a href="elements.html">Elements</a><span>&#124;</span>
-							<a href="portfolio_3.html">Portfolio</a><span>&#124;</span>
-							<a href="blog_main.html">Blog</a><span>&#124;</span>
+							<a class="first" href="index.jsp">主页</a><span>&#124;</span>
+							<a href="videoList.jsp">课程视频</a><span>&#124;</span>
+							<a href="docList.jsp">课程课件</a><span>&#124;</span>
+							<a href="forum.jsp">互动中心</a><span>&#124;</span>
+							<a href="about.jsp">关于</a><span>&#124;</span>
 							<a href="contact.html">Contact</a>
 						</div>
 						<div class="span3 smedia">
