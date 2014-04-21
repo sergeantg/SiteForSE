@@ -1,29 +1,9 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@include file="declar.jsp" %>
 
-<!DOCTYPE HTML>
 <html>
+
   <head>
-    
-   <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
-    <!-- CSS styles -->
-        <link href="css/mentor.min.css" rel="stylesheet"/>
-        <!--Skins: uncomment to activate-->
-        <link href="css/skin_blue.css" rel="stylesheet"/>
-        <!--<link href="css/skin_orange.css" rel="stylesheet"/>-->
-
-
-	<!-- http://remysharp.com/2009/01/07/html5-enabling-script/ -->
-	<!--[if lt IE 9]>
-		<script type="text/javascript">/*@cc_on'abbr article aside audio canvas details figcaption figure footer header hgroup mark meter nav output progress section summary subline time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/</script>
-	<![endif]-->
-	<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
-
-    <!-- favicon & iSO touch icons -->
-    <link rel="shortcut icon" href="favicon.jpg" />
+  	<%@include file="head.jsp" %>
   </head>
   
   <body>
@@ -40,8 +20,6 @@
 	    <a href="teacherIntro.jsp">教材简介</a> <span class="divider">/</span>
 	    </li>
 	  </ul>
-	  </div>
-      <div class="container mainContent">
       
         <div class="row-fluid">
           
@@ -56,57 +34,10 @@
                 <li><a href="teacherIntro.jsp"><i class="icon-user"></i> 教师介绍</a></li>
                 <li class="active"><a href="textbookIntro.jsp"><i class="icon-book"></i> 教材简介</a></li>
                 <li><a href="courseIntro.jsp"><i class="icon-star"></i>课程简介</a></li>
-                <li ><a href="#"><i class="icon-white icon-info-sign"></i> About Us</a></li>
+                <li ><a href="about.jsp"><i class="icon-white icon-info-sign"></i> About Us</a></li>
                 <li class="divider"></li>
-                <li><a href="#"><i class="icon-flag"></i> Help</a></li>
-                
               </ul>
             </div>
-            
-            
-            <!--social media widget-->
-            
-            <div class="widget widget_social">
-              <h3>Social Media Widget</h3>
-              <a href="#" data-rel="tooltip" title="Pinterest" class="sm-icon sm-icon-pinterest"></a>
-              <a href="#" data-rel="tooltip" title="Dribbble" class="sm-icon sm-icon-dribbble"></a>
-              <a href="#" data-rel="tooltip" title="Skype" class="sm-icon sm-icon-skype"></a>
-              <a href="#" data-rel="tooltip" title="facebook" class="sm-icon sm-icon-facebook"></a>
-              <a href="#" data-rel="tooltip" title="Vimeo" class="sm-icon sm-icon-vimeo"></a>
-            </div>
-            
-            
-            <!--categories widget-->
-            
-            <div class="widget widget_categories">
-              <h3>Categories</h3>
-              <ul>
-                <li class="cat-item">
-                  <a title="View all posts filed under Business 101" href="#">Business 101</a>(6)
-                </li>
-                <li class="cat-item">
-                  <a title="View all posts filed under Strategy" href="#">Strategy</a>(11)
-                </li>
-                <li class="cat-item">
-                  <a title="View all posts filed under Profit & Loss" href="#">Profit & Loss</a>(25)
-                </li>
-                <li class="cat-item">
-                  <a title="View all posts filed under Startup" href="#">Startup</a>(1)
-                </li>
-              </ul>
-            </div>
-            
-            
-            <!--text widget-->
-            
-            <div class="widget widget_text">
-              <h3>Text Widget 1</h3>
-              <div class="textwidget"><p>Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Phasellus hen drerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapi bus id, mattis vel, nisi. Sed pretium.</p></div> <a href="#"><span class="label">Read More</span></a>
-            </div>
-            
-            
-            
-            
             
           </aside> <!--end sidebar-->
           

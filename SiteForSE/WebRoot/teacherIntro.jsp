@@ -1,7 +1,10 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@include file="declar.jsp" %>
 
-<!DOCTYPE HTML>
 <html>
+
+  <head>
+  	<%@include file="head.jsp" %>
+  </head>
   
   <body>
     <%@include file="header.jsp" %>
@@ -17,8 +20,6 @@
 	    <a href="teacherIntro.jsp">教师介绍</a> <span class="divider">/</span>
 	    </li>
 	  </ul>
-	  </div>
-      <div class="container mainContent">
       
         <div class="row-fluid">
           
@@ -33,58 +34,12 @@
                 <li class="active"><a href="teacherIntro.jsp"><i class="icon-user"></i> 教师介绍</a></li>
                 <li><a href="textbookIntro.jsp"><i class="icon-book"></i> 教材简介</a></li>
                 <li><a href="courseIntro.jsp"><i class="icon-star"></i>课程简介</a></li>
-                <li ><a href="#"><i class="icon-white icon-info-sign"></i> About Us</a></li>
+                <li ><a href="about.jsp"><i class="icon-white icon-info-sign"></i> About Us</a></li>
                 <li class="divider"></li>
-                <li><a href="#"><i class="icon-flag"></i> Help</a></li>
                 
               </ul>
             </div>
-            
-            
-            <!--social media widget-->
-            
-            <div class="widget widget_social">
-              <h3>Social Media Widget</h3>
-              <a href="#" data-rel="tooltip" title="Pinterest" class="sm-icon sm-icon-pinterest"></a>
-              <a href="#" data-rel="tooltip" title="Dribbble" class="sm-icon sm-icon-dribbble"></a>
-              <a href="#" data-rel="tooltip" title="Skype" class="sm-icon sm-icon-skype"></a>
-              <a href="#" data-rel="tooltip" title="facebook" class="sm-icon sm-icon-facebook"></a>
-              <a href="#" data-rel="tooltip" title="Vimeo" class="sm-icon sm-icon-vimeo"></a>
-            </div>
-            
-            
-            <!--categories widget-->
-            
-            <div class="widget widget_categories">
-              <h3>Categories</h3>
-              <ul>
-                <li class="cat-item">
-                  <a title="View all posts filed under Business 101" href="#">Business 101</a>(6)
-                </li>
-                <li class="cat-item">
-                  <a title="View all posts filed under Strategy" href="#">Strategy</a>(11)
-                </li>
-                <li class="cat-item">
-                  <a title="View all posts filed under Profit & Loss" href="#">Profit & Loss</a>(25)
-                </li>
-                <li class="cat-item">
-                  <a title="View all posts filed under Startup" href="#">Startup</a>(1)
-                </li>
-              </ul>
-            </div>
-            
-            
-            <!--text widget-->
-            
-            <div class="widget widget_text">
-              <h3>Text Widget 1</h3>
-              <div class="textwidget"><p>Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Phasellus hen drerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapi bus id, mattis vel, nisi. Sed pretium.</p></div> <a href="#"><span class="label">Read More</span></a>
-            </div>
-            
-            
-            
-            
-            
+         
           </aside> <!--end sidebar-->
           
           <!--main content-->
@@ -113,9 +68,9 @@
                             <img src="img/hanzhi.jpg" alt="project" />
                              <span></span>
                           <div class="title">
-                            <span class="icon-picture"></span><a href="#">Custom Lightbox Project (Fill)</a>
+                            <span class="icon-picture"></span><a href="#">韩智</a>
                           </div>
-                          <p>Lorem ipsum dolor sitam et conse caetue adi pit mit solsz..</p>
+                          <p>南开大学软件学院</p>
                         </div>  
                       </div>
 

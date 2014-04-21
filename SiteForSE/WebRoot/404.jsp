@@ -5,10 +5,11 @@
   <head>
   	<%@include file="head.jsp" %>
   </head>
-
+  
   <body>
     
     <%@include file="header.jsp" %>
+    
 	<!--main content-->
     <section class="mainContentWrap">
       <div class="container mainContent">
@@ -42,8 +43,6 @@
                       <br />
                       <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
                       <br />
-                      <a href="contact.html" class="btn btn-danger">Home</a>
-                      <a href="contact.html" class="btn btn-danger">Contact</a>
                     </div>
                     
                     

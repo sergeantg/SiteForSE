@@ -1,11 +1,11 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML>
-<!--[if IE 7 ]>    <html class="ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9 no-js" lang="en"> <![endif]--> 
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<%@include file="declar.jsp" %>
 
-<body>
+<html>
+
+  <head>
+  	<%@include file="head.jsp" %>
+  </head>
+  <body>
     
     <%@include file="header.jsp" %>
 
@@ -24,5 +24,5 @@
         <script type="text/javascript" src="js/mentor.min.js"></script>
 		<script type="text/javascript" src="preview/preview.js"></script>
 
-</body>
+  </body>
 </html>
