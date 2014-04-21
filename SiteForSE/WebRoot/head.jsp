@@ -1,4 +1,4 @@
-<base href=" <%=basePath%>">  
+<base href="<%=basePath%>"> 
 <meta charset="utf-8" />
 <title>Site For SE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
