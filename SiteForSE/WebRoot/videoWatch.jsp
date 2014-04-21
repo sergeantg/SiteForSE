@@ -9,7 +9,10 @@
     
     <%@include file="header.jsp" %>
 
-    
+	<div>
+		<video src="G:/电影/水果猎人.The.Fruit.Hunters.中英字幕.WEBrip.720x400.mp4" controls="controls">			
+		</video>
+	</div>
     <!--footer-->
     <%@include file="footer.jsp" %>
 		
