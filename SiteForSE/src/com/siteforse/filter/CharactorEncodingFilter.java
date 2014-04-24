@@ -19,10 +19,12 @@ public class CharactorEncodingFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
 		request.setCharacterEncoding(config.getInitParameter("encoding"));
-		//System.out.println("charset"+config.getInitParameter("encoding")+" "+request.getRemoteAddr());
+		// System.out.println("charset"+config.getInitParameter("encoding")+" "+request.getRemoteAddr());
 		chain.doFilter(request, response);
 	}
+
 	private FilterConfig config;
+
 	public void init(FilterConfig filterConfig) throws ServletException {
 		config = filterConfig;
 	}

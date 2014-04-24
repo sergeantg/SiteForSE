@@ -20,4 +20,25 @@
   		<param-value>UTF-8</param-value>
   	</init-param>
   </filter>
+  
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DocViewServlet</servlet-name>
+    <servlet-class>com.siteforse.servlet.DocViewServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>get list of docs</description>
+    <servlet-name>DocListServlet</servlet-name>
+    <servlet-class>com.siteforse.servlet.DocListServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DocViewServlet</servlet-name>
+    <url-pattern>/DocViewServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DocListServlet</servlet-name>
+    <url-pattern>/DocListServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
