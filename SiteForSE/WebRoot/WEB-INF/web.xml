@@ -32,6 +32,18 @@
     <servlet-name>DocListServlet</servlet-name>
     <servlet-class>com.siteforse.servlet.DocListServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>get list of docs</description>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.siteforse.servlet.TestServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>get list of docs</description>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>com.siteforse.servlet.AdminLoginServlet</servlet-class>
+  </servlet>
+
+
 
   <servlet-mapping>
     <servlet-name>DocViewServlet</servlet-name>
@@ -40,5 +52,13 @@
   <servlet-mapping>
     <servlet-name>DocListServlet</servlet-name>
     <url-pattern>/DocListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/admin/AdminLoginServlet</url-pattern>
   </servlet-mapping>
 </web-app>

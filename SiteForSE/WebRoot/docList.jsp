@@ -20,7 +20,8 @@
 						<thead>
 							<tr>
 								<th>名称</th>
-								<th>Class</th>
+								<th>添加日期</th>
+								<th>下载</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -29,7 +30,8 @@
 									<td class="muted"><a
 										href="DocViewServlet?docID=${item.docID}">${item.name }</a>
 									</td>
-									<td>tem</td>
+									<td>${item.addDate}</td>
+									<td><a href="<%=basePath%>${item.path}">下载</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>

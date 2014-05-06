@@ -71,7 +71,7 @@ public class DocViewServlet extends HttpServlet {
 		if (request.getParameter("docID") != null
 				&& request.getParameter("docID") != "") {
 			int docID = Integer.parseInt(request.getParameter("docID"));
-			System.out.println("1" + docID);
+			//System.out.println("1" + docID);
 			DocBiz biz = new DocBiz();
 			Doc doc = biz.getDoc(docID);
 
