@@ -45,15 +45,15 @@
     {
         font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,"微软雅黑";
         color:#2f2f2f;
-        font-size:18px;
+        font-size:20px;
         line-height:24px;
         font-weight: bold;
     }
     h4
     {
-        font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,"微软雅黑";
+        font-family:"微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
         color:#2f2f2f;
-        font-size:16px;
+        font-size:17px;
         line-height:20px;
         font-weight: bold;
     }
@@ -93,9 +93,19 @@
                 
     }
     
+    .well{
+        font-family:"微软雅黑", Georgia, Constantia, Lucida, serif;
+        font-size:18px;
+        line-height:24px;
+    }
     a:hover
     {
         text-decoration:none;
+    }
+
+    .breadcrumb{
+        font-size:20px;
+        line-height:24px;
     }
     
     .nav a{
@@ -375,7 +385,7 @@
     /*3rd level menu*/
     
     .navbar .nav .nav-header {
-        font-size: 12px;
+        font-size: 20px;
         font-weight: bold;
         line-height: 18px;
         color: #fff;
@@ -383,10 +393,11 @@
         text-transform: uppercase;
     }
 	
-	
+
 	
     /*styles for all sizes*/
     
+
     /*header*/
     header .smedia span{
         color:#aaa;
@@ -850,7 +861,7 @@
         border-left:1px solid #efefef;
         font-weight:bold;
         color:#666;
-        font-size:12px;
+        font-size:14px;
         line-height:20px;
     }
     

@@ -66,7 +66,7 @@
 
 										<div class="title">
 											<span class="icon-file"></span><a
-												href="http://s.etao.com/search?q=%C8%ED%BC%FE%B9%A4%B3%CC%A3%BA%CA%B5%BC%F9%D5%DF%B5%C4%D1%D0%BE%BF%B7%BD%B7%A8%A3%A8%D4%AD%CA%E9%B5%DA7%B0%E6%A3%A9&initiative_id=wwwetao_20140416">软件工程：实践者的研究方法（原书第7版）</a>
+												href="http://s.etao.com/search?q=%C8%ED%BC%FE%B9%A4%B3%CC%A3%BA%CA%B5%BC%F9%D5%DF%B5%C4%D1%D0%BE%BF%B7%BD%B7%A8%A3%A8%D4%AD%CA%E9%B5%DA7%B0%E6%A3%A9&initiative_id=wwwetao_20140416">软件工程：实践者的研究方法（第7版）</a>
 										</div>
 										<p>Roger S. Pressman著，郑人杰 等译，机械工业出版社</p>
 									</div>
@@ -82,7 +82,7 @@
 
 										<div class="title">
 											<span class="icon-film"></span><a
-												href="http://s.etao.com/search?q=%C8%ED%BC%FE%B9%A4%B3%CC%A3%A8%D4%AD%CA%E9%B5%DA9%B0%E6%A3%A9&initiative_id=setao_20140416&style=grid">软件工程（原书第9版）</a>
+												href="http://s.etao.com/search?q=%C8%ED%BC%FE%B9%A4%B3%CC%A3%A8%D4%AD%CA%E9%B5%DA9%B0%E6%A3%A9&initiative_id=setao_20140416&style=grid">软件工程（第9版）</a>
 										</div>
 										<p>Ian Sommerville 著，程成 等译，机械工业出版社</p>
 									</div>
@@ -100,7 +100,7 @@
 
 										<div class="title">
 											<span class="icon-picture"></span><a
-												href="http://s.etao.com/search?q=%C3%E6%CF%F2%B6%D4%CF%F3%D3%EB%B4%AB%CD%B3%C8%ED%BC%FE%B9%A4%B3%CC&initiative_id=setao_20140416&style=grid">面向对象与传统软件工程（原书第8版)</a>
+												href="http://s.etao.com/search?q=%C3%E6%CF%F2%B6%D4%CF%F3%D3%EB%B4%AB%CD%B3%C8%ED%BC%FE%B9%A4%B3%CC&initiative_id=setao_20140416&style=grid">面向对象与传统软件工程（第8版)</a>
 										</div>
 										<p>Stephen R.Schach著，机械工业出版社</p>
 									</div>
