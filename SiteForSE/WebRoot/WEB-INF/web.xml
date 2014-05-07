@@ -42,6 +42,18 @@
     <servlet-name>AdminLoginServlet</servlet-name>
     <servlet-class>com.siteforse.servlet.AdminLoginServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>get list of docs</description>
+    <servlet-name>DocUploadServlet</servlet-name>
+    <servlet-class>com.siteforse.servlet.DocUploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>get list of docs</description>
+    <servlet-name>DelDocServlet</servlet-name>
+    <servlet-class>com.siteforse.servlet.DelDocServlet</servlet-class>
+  </servlet>
+
+
 
 
 
@@ -60,5 +72,13 @@
   <servlet-mapping>
     <servlet-name>AdminLoginServlet</servlet-name>
     <url-pattern>/admin/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DocUploadServlet</servlet-name>
+    <url-pattern>/admin/DocUploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelDocServlet</servlet-name>
+    <url-pattern>/admin/DelDocServlet</url-pattern>
   </servlet-mapping>
 </web-app>

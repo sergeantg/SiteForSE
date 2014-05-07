@@ -1,5 +1,6 @@
 package com.siteforse.biz;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 import com.siteforse.dao.*;
@@ -24,5 +25,21 @@ public class DocBiz {
 	public ArrayList<Doc> getDocList() {
 		list = dao.getAll();
 		return list;
+	}
+	
+	public int add(Doc doc){
+		doc.setAddDate(new Timestamp(System.currentTimeMillis()));
+		return dao.add(doc);
+	}
+	
+	public int del(int ID){
+		return dao.del(ID);
+	}
+	
+	public int changeName(int ID, String name){
+		Doc doc = dao.getDoc(ID).get(0);
+		dao.del(ID);
+		doc.setName(name);
+		return dao.add(doc);
 	}
 }

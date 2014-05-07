@@ -33,7 +33,27 @@
         
         	<!-- Main Container -->
             <div class="container">
-
+				<div class="mws-panel-body">
+	                <form class="mws-form" action="/SiteForSE/admin/DocUploadServlet" method="post" enctype="multipart/form-data">
+	                    <div class="mws-form-block">
+	                        <div class="mws-form-row">
+	                            <label>文档名</label>
+	                            <div class="mws-form-item small">
+	                                <input type="text"  name="name" class="mws-textinput small" />
+	                            </div>
+	                        </div>
+	                        <div class="mws-form-row">
+	                            <label>选择</label>
+	                            <div class="mws-form-item large">
+	                                <input type="file" name="doc"/>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="mws-button-row">
+	                        <input type="submit" value="提交" class="mws-button green" />
+	                    </div>
+	                </form>
+            	</div>      
             </div>
             <!-- End Main Container -->
             

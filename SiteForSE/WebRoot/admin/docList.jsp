@@ -9,6 +9,33 @@
 
 <title>讨论帖</title>
 
+<script type="text/javascript">
+function delDoc(var docID){
+		var xmlhttp;
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    	xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+    	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+  	{
+	  	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	    {
+		    if(xmlhttp.responseText=="yes"){
+	            alert("修改成功");
+	            window.top.location.reload();
+	        }else{
+	       	 	alert("修改失败");
+	        }
+    	}
+  	};
+  	xmlhttp.open("POST","./DelDocServlet?docID="+docID,true);
+  	xmlhttp.send();
+}
+</script>
 </head>
 
 <body>
@@ -62,8 +89,8 @@ request.setAttribute("docList", list);
 										href="DocViewServlet?docID=${item.docID}">${item.name }</a>
 									</td>
 									<td>${item.addDate}</td>
-									<td><a href="<%=basePath%>${item.path}">下载</a></td>
-									<td><form action="DelDoc?id=${item.docID }">删除</form></td>
+									<td><a href="${item.path}">下载</a></td>
+									<td><input type="button" onclick="delDoc(${item.docID})" value="Red" class="mws-button gray small"/></td>
 								</tr>
 								</c:forEach>
                             </tbody>

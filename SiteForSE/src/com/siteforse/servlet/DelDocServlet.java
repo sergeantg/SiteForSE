@@ -1,27 +1,21 @@
 package com.siteforse.servlet;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.io.ByteArrayInputStream;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 
-import com.siteforse.entity.Doc;
+import com.siteforse.biz.DocBiz;
 
-public class TestServlet extends HttpServlet {
+public class DelDocServlet extends HttpServlet {
 
 	/**
 	 * Constructor of the object.
 	 */
-	public TestServlet() {
+	public DelDocServlet() {
 		super();
 	}
 
@@ -61,63 +55,17 @@ public class TestServlet extends HttpServlet {
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setContentType("text/html");
-		InputStream stream = request.getInputStream();
-		String str = convertStreamToString(stream);
-		Enumeration<String> e = request.getHeaderNames();
-		while(e.hasMoreElements()){
-			System.out.println("request header==>"+e.nextElement());
-		}
 
-		new ByteArrayInputStream(stream);
-		Part part = request.getPart("type");
-		if(part!=null)
-		System.out.println("part name==>"+part.getName());
-		System.out.println("request content==>"+str);
-		System.out.println("type==>"+request.getContentType());
+		PrintWriter out = response.getWriter();
+		
+		DocBiz biz = new DocBiz();
+		int ID = Integer.parseInt(request.getParameter("docID"));
+		if(biz.del(ID)==1)
+			out.print("yes");
+		else out.print("no");
+
 	}
 
-	public String convertStreamToString(InputStream is) {   
-
-		   BufferedReader reader = new BufferedReader(new InputStreamReader(is));   
-
-		        StringBuilder sb = new StringBuilder();   
-
-		    
-
-		        String line = null;   
-
-		        try {   
-
-		            while ((line = reader.readLine()) != null) {   
-
-		                sb.append(line + "/n");   
-
-		            }   
-
-		        } catch (IOException e) {   
-
-		            e.printStackTrace();   
-
-		        } finally {   
-
-		            try {   
-
-		                is.close();   
-
-		            } catch (IOException e) {   
-
-		                e.printStackTrace();   
-
-		            }   
-
-		        }   
-
-		    
-
-		        return sb.toString();   
-
-		    }   
 	/**
 	 * Initialization of the servlet. <br>
 	 *

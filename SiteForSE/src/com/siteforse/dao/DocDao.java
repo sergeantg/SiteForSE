@@ -1,6 +1,7 @@
 package com.siteforse.dao;
 
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 import com.siteforse.entity.Doc;
@@ -46,5 +47,42 @@ public class DocDao extends BaseDao {
 			closeConn();
 		}
 		return list;
+	}
+	
+	public int add(Doc doc){
+		int count = 0;
+		sql = "insert into doc values(null, ?, ?, ?)";
+		openConn();
+		createPst(sql);
+		
+		try {
+			pst.setString(1, doc.getName());
+			pst.setTimestamp(2, doc.getAddDate());
+			pst.setString(3, doc.getPath());
+
+			count = update();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeConn();
+		}
+		return count;
+	}
+	
+	public int del(int ID){
+		int count = 0;
+		sql = "DELETE FROM doc where docID=?";
+		openConn();
+		createPst(sql);
+		
+		try {
+			pst.setInt(1, ID);
+			count = update();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeConn();
+		}
+		return count;
 	}
 }

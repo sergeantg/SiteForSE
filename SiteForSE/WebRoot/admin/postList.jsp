@@ -1,10 +1,11 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <%@include file="head.jsp"%>
 
-<title>MWS Admin - Dashboard</title>
+<title></title>
 
 </head>
 
@@ -33,29 +34,29 @@
         
         	<!-- Main Container -->
             <div class="container">
-                                <div class="mws-panel grid_8">
+                <div class="mws-panel grid_8">
                     <div class="mws-panel-header">
-                        <span class="mws-i-24 i-table-1">Data Table with Numbered Pagination</span>
+                        <span class="mws-i-24 i-table-1">讨论帖</span>
                     </div>
                     <div class="mws-panel-body">
                         <table class="mws-datatable-fn mws-table">
                             <thead>
                                 <tr>
-                                    <th>Rendering engine</th>
-                                    <th>Browser</th>
-                                    <th>Platform(s)</th>
-                                    <th>Engine version</th>
-                                    <th>CSS grade</th>
+                                    <th>标题</th>
+                                    <th>发表时间</th>
+                                    <th>删除</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="gradeU">
-                                    <td>Other browsers</td>
-                                    <td>All others</td>
-                                    <td>-</td>
-                                    <td class="center">-</td>
-                                    <td class="center">U</td>
+                                <c:forEach items="${postList }" var="item">
+                                <tr class="gradeX">
+                                    <td class="muted"><a
+                                        href="PostViewServlet?id=${item.postID}">${item.title }</a>
+                                    </td>
+                                    <td>${item.addDate}</td>
                                 </tr>
+                                <th><form action="DelPostServlet?id=${item.postID}"></form></th>
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>
