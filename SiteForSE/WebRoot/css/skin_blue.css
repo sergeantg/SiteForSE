@@ -1,4 +1,4 @@
-/*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+/*â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“
     Blue Skin Style Sheet
     Theme Name: Mentor
     Description: A Business Minded WordPress Theme 
@@ -7,7 +7,7 @@
     Website: http://pixelentity.com/
     Stock: http://themeforest.net/user/pixelentity
     Version: 1.0
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“*/
 	
 	/*skin primary color: #49afcd;*/
 	/*skin secondary color: #c8e6e0;*/
@@ -17,47 +17,59 @@
     body
     { 
         background: #fcfcfc;
-        font-family:helvetica, arial, verdana, sans-serif;
-        color:#888;
-        font-size:12px;
+        font-family:"å¾®è½¯é›…é»‘",helvetica, arial, verdana, sans-serif;
+        color:#000000;
+        font-size:14px;
     }
     
     h1
     {
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,"å¾®è½¯é›…é»‘";
         color:#2f2f2f;
         font-size:24px;
         line-height:30px;
+        font-weight: bold;
     }
     
     h2
     {
         font-size:22px;
-        color:#777;
+        color:#000000;
         line-height:28px;
-        font-family:Georgia, Constantia, Lucida, serif;
+        font-family:Georgia, Constantia, Lucida, serif,"å¾®è½¯é›…é»‘";
         font-weight:normal;
+        font-weight: bold;
     }
     
     h3
     {
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,"å¾®è½¯é›…é»‘";
         color:#2f2f2f;
         font-size:18px;
         line-height:24px;
+        font-weight: bold;
+    }
+    h4
+    {
+        font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,"å¾®è½¯é›…é»‘";
+        color:#2f2f2f;
+        font-size:16px;
+        line-height:20px;
+        font-weight: bold;
     }
     
     
     p
     {
-       font-family:Georgia, Constantia, Lucida, serif;
-       font-family:helvetica, arial, verdana, sans-serif;
-       color:#919191;
-       font-size:12px;
+       font-family:"å¾®è½¯é›…é»‘", Georgia, Constantia, Lucida, serif;      
+       color:#000000;
+       font-size:15px;
+       line-height:20px;
+       text-align: justify;
     }
     
     footer p{
-        color:#777;
+        color:#000000;
     }
     
     a
@@ -87,22 +99,22 @@
     }
     
     .nav a{
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,"å¾®è½¯é›…é»‘";
     }
     
     :-moz-placeholder {
-        color: #bbb;
-        font-size:12px;
+        color: #000000;
+        font-size:14px;
     }
       
     ::-webkit-input-placeholder {
-        color: #bbb;
-        font-size:12px;
+        color: #000000;
+        font-size:14px;
     }
     
     .label{
         background-color:#c1c1bf;
-        font-size:9px;
+        font-size:14px;
         text-transform:uppercase;
         font-weight:bold;
         text-shadow:none;
@@ -189,7 +201,7 @@
     }
     
     .hero-unit.price li{
-        font-size:12px;
+        font-size:14px;
         font-weight:bold;
         color:#fff;
         border-bottom:1px dotted #ddd;
@@ -856,7 +868,7 @@
     
     .item-description .subtitle a{
         border-left:1px solid #efefef;
-        color:#999;
+        color:#000000;
         font-size:12px;
         line-height:20px;
     }
@@ -1057,11 +1069,11 @@
     }
     
     .copyright p{
-        color:#bbb;
+        color:#000000;
     }
     
     .footerLower .footNav a{
-        color:#999;
+        color:#000000;
     }
     
     .footerLower .footNav span{
