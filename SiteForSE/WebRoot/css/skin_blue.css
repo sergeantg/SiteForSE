@@ -96,8 +96,9 @@
     .well{
         font-family:"微软雅黑", Georgia, Constantia, Lucida, serif;
         font-size:18px;
-        line-height:24px;
+        line-height:500%;
     }
+
     a:hover
     {
         text-decoration:none;
@@ -109,7 +110,8 @@
     }
     
     .nav a{
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,"微软雅黑";
+        font-family: "微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
+        line-height:30px;
     }
     
     :-moz-placeholder {
@@ -299,9 +301,9 @@
     }
     
     .navbar .nav > li > a{
+        font-family:"微软雅黑",helvetica, arial, verdana, sans-serif;
         color:#979795;
-        font-weight:bold;
-        font-size:14px;
+        font-size:20px;
         text-shadow: none;
         border-bottom:2px solid #c8e6e0;
     }
@@ -609,22 +611,6 @@
     
     
     /*pagination*/
-    
-    .pagination a{
-        color:#666;
-        font-weight:bold;
-    }
-    
-    .pagination a:hover{
-        color:#2f2f2f;
-    }
-    
-    .pagination .active a{
-        background-color:#49afcd;
-        color:#fff;
-        border-color:#49afcd;
-    }
-    
     
     /*pager*/
     

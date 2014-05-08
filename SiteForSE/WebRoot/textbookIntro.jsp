@@ -27,17 +27,17 @@
 
 				<aside class="span3 sidebar">
 
-					<div class="well" style="padding: 8px 0;">
+					<div class="well" style="padding: 16px 0;">
 						<ul class="nav nav-list">
 							<li class="nav-header">关于</li>
 							<li><a href="teacherIntro.jsp"><i class="icon-user"></i>
 									教师介绍</a></li>
 							<li class="active"><a href="textbookIntro.jsp"><i
 									class="icon-book"></i> 教材简介</a></li>
-							<li><a href="courseIntro.jsp"><i class="icon-star"></i>课程简介</a>
+							<li><a href="courseIntro.jsp"><i class="icon-star"></i> 课程简介</a>
 							</li>
 							<li><a href="about.jsp"><i
-									class="icon-white icon-info-sign"></i> About Us</a></li>
+									class="icon-info-sign"></i> About Us</a></li>
 							<li class="divider"></li>
 						</ul>
 					</div>
