@@ -98,7 +98,7 @@
     display: inline-block;
     width: 580px;
     padding: 4px;
-    margin-bottom: 9px;
+    margin-bottom: 12px;
     font-size: 18px;
     line-height: 18px;
     color: #000000;
@@ -272,6 +272,7 @@
     .nav-list > .active > a,
     .nav-list > .active > a:hover{
         background-color:#49afcd;
+        font-size: 18px;
     }
     
     .nav-list i{
@@ -284,6 +285,7 @@
     
     .nav-list a{
         color:#2f2f2f;
+        font-size: 18px;
     }
     
     blockquote{
