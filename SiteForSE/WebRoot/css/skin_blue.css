@@ -36,14 +36,14 @@
         font-size:22px;
         color:#000000;
         line-height:28px;
-        font-family:Georgia, Constantia, Lucida, serif,"微软雅黑";
+        font-family:"微软雅黑",Georgia, Constantia, Lucida, serif;
         font-weight:normal;
         font-weight: bold;
     }
     
     h3
     {
-        font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,"微软雅黑";
+        font-family:"微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
         color:#2f2f2f;
         font-size:20px;
         line-height:24px;
@@ -91,6 +91,28 @@
 			 -o-transition: opacity 0.2s linear;  
 				transition: opacity 0.2s linear;
                 
+    }
+
+    .neirong {
+    font-family: "微软雅黑";
+    display: inline-block;
+    width: 580px;
+    padding: 4px;
+    margin-bottom: 9px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    border: 1px solid #0077f8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px
+}
+.form-do{
+    text-align: right;
+    width: 580px;
+}
+
+
     }
     
     .well{
@@ -1203,7 +1225,17 @@
         .navbar .nav > li > a, .navbar .dropdown-menu a {
             color:#666;
         }
-        
+
+        .newpost {
+            width: 60%;
+            float: left
+        }
+
+        .psearch {
+            width: 30%;
+            float: right
+        }
+
         /*navbar dropdown btn*/
         .btn-navbar {
             background: #c1c1bf;

@@ -736,6 +736,12 @@ a:hover {
 	*zoom: 1
 }
 
+.row-fluid .btn-primary {
+	position: absolute;
+	top: 16px;
+	right: 20px
+}
+
 .row-fluid:before,.row-fluid:after {
 	display: table;
 	content: ""
@@ -925,7 +931,7 @@ h6 {
 
 ul,ol {
 	padding: 0;
-	margin: 0 0 9px 25px
+	margin: 0 0 9px 5px
 }
 
 ul ul,ul ol,ol ol,ol ul {
@@ -1155,15 +1161,16 @@ label {
 }
 
 input,textarea,select,.uneditable-input {
+	font-family: "微软雅黑";
 	display: inline-block;
-	width: 210px;
-	height: 18px;
+	width: 480px;
+	height: 40px;
 	padding: 4px;
 	margin-bottom: 9px;
-	font-size: 13px;
+	font-size: 18px;
 	line-height: 18px;
-	color: #555;
-	border: 1px solid #ccc;
+	color: #000000;
+	border: 1px solid #0077f8;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px
@@ -1222,6 +1229,15 @@ select,input[type="file"] {
 input[type="file"] {
 	line-height: 18px \9
 }
+
+input {
+	padding: 3px;
+	outline: 0;
+	resize: none;
+	border: 1px solid #e9e9e9
+}
+
+
 
 select {
 	width: 220px;
@@ -1369,7 +1385,7 @@ input.span4,textarea.span4,.uneditable-input.span4 {
 }
 
 input.span3,textarea.span3,.uneditable-input.span3 {
-	width: 210px
+	width: 280px
 }
 
 input.span2,textarea.span2,.uneditable-input.span2 {
@@ -1614,9 +1630,15 @@ input:focus:required:invalid:focus,textarea:focus:required:invalid:focus,select:
 	border-radius: 14px
 }
 
+.form {
+	padding-bottom: 30px;
+	color: #999
+}
+
 .form-search input,.form-inline input,.form-horizontal input,.form-search textarea,.form-inline textarea,.form-horizontal textarea,.form-search select,.form-inline select,.form-horizontal select,.form-search .help-inline,.form-inline .help-inline,.form-horizontal .help-inline,.form-search .uneditable-input,.form-inline .uneditable-input,.form-horizontal .uneditable-input,.form-search .input-prepend,.form-inline .input-prepend,.form-horizontal .input-prepend,.form-search .input-append,.form-inline .input-append,.form-horizontal .input-append {
 	display: inline-block;
-	margin-bottom: 0
+	margin-bottom: 0;
+	height: 38px;
 }
 
 .form-search .hide,.form-inline .hide,.form-horizontal .hide {
@@ -1948,7 +1970,8 @@ table .span24 {
 }
 
 .icon-search {
-	background-position: -48px 0
+	background-image: url("../img/skin/search.png");
+	background-position:0 0
 }
 
 .icon-envelope {
@@ -2720,9 +2743,58 @@ table .span24 {
 	box-shadow: none
 }
 
-.btn-large {
+.glyphicon {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+
+.glyphicon:empty {
+	width: 1em
+}
+
+.glyphicon-search:before {
+	content: "\e003"
+}
+
+.glyphicon-asterisk:before {
+	content: "\2a"
+}
+
+.glyphicon-plus:before {
+	content: "\2b"
+}
+
+.glyphicon-euro:before {
+	content: "\20ac"
+}
+
+.glyphicon-minus:before {
+	content: "\2212"
+}
+
+.glyphicon-cloud:before {
+	content: "\2601"
+}
+
+.glyphicon-envelope:before {
+	content: "\2709"
+}
+
+.glyphicon-pencil:before {
+	content: "\270f"
+}
+.input-large {
 	padding: 9px 14px;
 	font-size: 15px;
+	font-family: "微软雅黑";
 	line-height: normal;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -4994,6 +5066,13 @@ a.thumbnail:hover {
 		border: 1px solid #ccc
 	}
 
+    .form {
+	padding-bottom: 30px;
+	color: #999
+    }
+
+
+
 	.form-horizontal .control-group>label {
 		float: none;
 		width: auto;
@@ -6836,6 +6915,8 @@ a.influx-video {
 	max-width: none
 }
 
+
+
 .result {
 	margin-bottom: 30px;
 	padding-bottom: 25px;
@@ -6979,6 +7060,16 @@ a.influx-video {
 	transition-duration: 0s
 }
 
+.newpost {
+     width: 60%;
+     float: left
+}
+
+.psearch {
+      width: 30%;
+      float: right
+}
+
 .pageTitle.portfolio {
 	border-bottom: 1px solid #eee;
 	margin-bottom: 35px;
@@ -7027,17 +7118,16 @@ aside.sidebar {
 
 .widget_search button[type=submit] {
 	background-color: transparent;
-	background-position: -44px 7px;
 	border: 0 none;
 	cursor: pointer;
-	height: 27px;
+	height: 34px;
 	padding: 5px;
 	padding-right: 10px;
 	padding-bottom: 8px;
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 26px;
+	width: 32px;
 	opacity: .4
 }
 
@@ -7055,8 +7145,7 @@ input:focus,textarea:focus {
 }
 
 .body-search {
-	display: none;
-	margin-bottom: 30px
+	width: 97%;
 }
 
 .widget_text a:hover {
@@ -7750,6 +7839,71 @@ footer .widget_stats {
 .widget_stats a:hover {
 	text-decoration: none
 }
+
+*,:after,:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.clearfix:after,.mainContent .discuss_list .discuss-title:after,.mainContent .discuss_list li:after,.mobile_bottom:after,.search .course_list li:after,.side .course_list li:after,.side .discuss_list li:after,.side .rank_list li:after,.side-coops .side-coop:after {
+	clear: both
+}
+
+.clearfix:after,.clearfix:before,.mainContent .discuss_list .discuss-title:after,.mainContent .discuss_list .discuss-title:before,.mainContent .discuss_list li:after,.mainContent .discuss_list li:before,.mobile_bottom:after,.mobile_bottom:before,.search .course_list li:after,.search .course_list li:before,.side .course_list li:after,.side .course_list li:before,.side .discuss_list li:after,.side .discuss_list li:before,.side .rank_list li:after,.side .rank_list li:before,.side-coops .side-coop:after,.side-coops .side-coop:before {
+	content: " ";
+	display: table
+}
+
+.mainContent .discuss_list {
+	border-top: 1px solid #eee;
+	clear: both;
+	margin-top: 20px
+}
+
+.mainContent .discuss_list li {
+	border-bottom: 1px dashed #e9e9e9;
+	padding: 15px 0 8px;
+	list-style-type:none
+}
+
+.mainContent .discuss_list li:last-child {
+	border: 0
+}
+
+.mainContent .discuss_list .discuss-title {
+	float: left;
+	font-size: 16px;
+	width: 480px;
+	margin-right: 20px;
+	margin-bottom: 1px
+}
+
+.mainContent .discuss_list .sort {
+	background: #f5f5f5;
+	color: #999;
+	font-size: 12px;
+	margin: -3px 5px 0 0;
+	padding: 2px 8px
+}
+
+.mainContent .discuss_list .discuss-author,.mainContent .discuss_list .discuss-num {
+	float: left
+}
+
+.mainContent .discuss_list .discuss-author {
+	width: 120px
+}
+
+.mainContent .discuss_list .discuss-num {
+	color: #999;
+	width: 30px
+}
+
+.mainContent .discuss_list .discuss-time {
+	color: #999;
+	float: right
+}
+
 
 .widget_stats a span {
 	color: #aaa;
