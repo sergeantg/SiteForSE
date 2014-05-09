@@ -52,6 +52,18 @@
     <servlet-name>DelDocServlet</servlet-name>
     <servlet-class>com.siteforse.servlet.DelDocServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>change the password of admin</description>
+    <servlet-name>ChangePswServlet</servlet-name>
+    <servlet-class>com.siteforse.servlet.ChangePswServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>change the password of admin</description>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <servlet-class>com.siteforse.servlet.AdminLogoutServlet</servlet-class>
+  </servlet>
+
+
 
 
 
@@ -80,5 +92,13 @@
   <servlet-mapping>
     <servlet-name>DelDocServlet</servlet-name>
     <url-pattern>/admin/DelDocServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePswServlet</servlet-name>
+    <url-pattern>/admin/ChangePswServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <url-pattern>/admin/AdminLogoutServlet</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -57,17 +57,18 @@ public class AdminLoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
 		String psw = request.getParameter("password");
 		
 		AdminBiz biz = new AdminBiz();
-		HttpSession session = request.getSession();
 		
 		if((psw!=null)&&(biz.validate(psw)==1)){
 			
-			session.setAttribute("login", "y");
+			request.getSession().setAttribute("login", "y");
 			request.getRequestDispatcher("/admin/docList.jsp").forward(request, response);
 		}else{
-			
+			request.getRequestDispatcher("/admin/login.jsp").forward(request, response);
 		}
 	}
 

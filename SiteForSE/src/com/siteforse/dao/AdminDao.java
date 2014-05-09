@@ -22,18 +22,20 @@ public class AdminDao extends BaseDao{
 		return ad;
 	}
 
-	public void setPassword(String password){
+	public int setPassword(String password){
+		int count = -1; 
 		sql = "update admin set password=?";
 
 		openConn();
 		createPst(sql);
 		try{
 			pst.setString(1,password);
-			update();
+			count = update();
 		}catch(SQLException e){
 			e.printStackTrace();
 		}finally{
 			closeConn();
 		}
+		return count;
 	}
 }

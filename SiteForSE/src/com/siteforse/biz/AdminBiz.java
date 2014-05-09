@@ -13,10 +13,8 @@ public class AdminBiz{
 	}
 
 	public int changePsw(String oldPsw, String newPsw){
-		if(validate(oldPsw)==1){
-			dao.setPassword(newPsw);
-			return 1;
-		}
+		if(validate(oldPsw)==1)
+			return dao.setPassword(newPsw);
 		return 0;
 	}
 }
