@@ -801,7 +801,10 @@ a:hover {
 }
 
 .row-fluid>.span2 {
-	width: 14.89361702%
+	width: 14.89361702%;
+	font-size: 18px;
+	color: black;
+	padding: 12px;
 }
 
 .row-fluid>.span1 {
@@ -1163,10 +1166,10 @@ label {
 input,textarea,select,.uneditable-input {
 	font-family: "微软雅黑";
 	display: inline-block;
-	width: 480px;
+	width: 580px;
 	height: 40px;
 	padding: 4px;
-	margin-bottom: 9px;
+	margin-bottom: 12px;
 	font-size: 18px;
 	line-height: 18px;
 	color: #000000;
@@ -2525,6 +2528,7 @@ table .span24 {
 	display: block;
 	padding: 3px 15px;
 	clear: both;
+	font-size: 18px;
 	font-weight: normal;
 	line-height: 18px;
 	color: #333;
@@ -2662,8 +2666,8 @@ table .span24 {
 	*zoom: 1;
 	padding: 4px 10px 4px;
 	margin-bottom: 0;
-	font-size: 13px;
-	line-height: 18px;
+	font-size: 20px;
+	line-height: 20px;
 	color: #333;
 	text-align: center;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.75);
@@ -2802,7 +2806,7 @@ table .span24 {
 }
 
 .btn-large [class^="icon-"] {
-	margin-top: 1px
+	margin-top: 6px
 }
 
 .btn-small {
@@ -3226,13 +3230,14 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini {
 
 .nav>li>a:hover {
 	text-decoration: none;
-	background-color: #eee
+	background-color: #eee;
+	font-size: 20px;
 }
 
 .nav .nav-header {
 	display: block;
 	padding: 3px 15px;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: bold;
 	line-height: 18px;
 	color: #999;
