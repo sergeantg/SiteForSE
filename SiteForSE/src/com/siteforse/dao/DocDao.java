@@ -36,7 +36,6 @@ public class DocDao extends BaseDao {
 		createPst(sql);
 		try {
 			query();
-			Doc tem = new Doc();
 			while (rs.next()) {
 				list.add(new Doc(rs.getInt("DOC_ID"), rs.getString("NAME"), rs
 						.getTimestamp("ADD_DATE"), rs.getString("PATH")));
@@ -48,13 +47,13 @@ public class DocDao extends BaseDao {
 		}
 		return list;
 	}
-	
-	public int add(Doc doc){
+
+	public int add(Doc doc) {
 		int count = 0;
-		sql = "insert into doc values(null, ?, ?, ?)";
+		sql = "insert into doc (NAME, ADD_DATE, PATH) values(?, ?, ?)";
 		openConn();
 		createPst(sql);
-		
+
 		try {
 			pst.setString(1, doc.getName());
 			pst.setTimestamp(2, doc.getAddDate());
@@ -68,13 +67,13 @@ public class DocDao extends BaseDao {
 		}
 		return count;
 	}
-	
-	public int del(int ID){
+
+	public int del(int ID) {
 		int count = 0;
-		sql = "DELETE FROM doc where docID=?";
+		sql = "DELETE FROM doc where DOC_ID=?";
 		openConn();
 		createPst(sql);
-		
+
 		try {
 			pst.setInt(1, ID);
 			count = update();

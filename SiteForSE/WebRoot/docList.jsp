@@ -1,11 +1,20 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="com.siteforse.biz.DocBiz"%>
 <%@include file="declar.jsp"%>
+<%
+	request.setAttribute("docList", new DocBiz().getDocList());
+%>
+
 <html>
+
 <head>
+
 <%@include file="head.jsp"%>
+
 </head>
+
 <body>
 	<%@include file="header.jsp"%>
 
@@ -28,7 +37,7 @@
 							<c:forEach items="${docList }" var="item">
 								<tr>
 									<td class="muted"><a
-										href="DocViewServlet?docID=${item.docID}">${item.name }</a>
+										href="js/web/viewer.jsp?p=${item.path}" target="_blank">${item.name }</a>
 									</td>
 									<td>${item.addDate}</td>
 									<td><a href="<%=basePath%>${item.path}">下载</a></td>
@@ -42,5 +51,7 @@
 		</div>
 	</section>
 	<%@include file="footer.jsp"%>
+
 </body>
+
 </html>

@@ -61,8 +61,8 @@ public class DelDocServlet extends HttpServlet {
 		DocBiz biz = new DocBiz();
 		int ID = Integer.parseInt(request.getParameter("docID"));
 		if(biz.del(ID)==1)
-			out.print("yes");
-		else out.print("no");
+			out.print("y");
+		else out.print("n");
 
 	}
 
