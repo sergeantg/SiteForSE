@@ -11,10 +11,10 @@
 				</div>
 
 				<div class="span6 footNav">
-					<a class="first" href="index.jsp">主页</a><span>&#124;</span> <a
-						href="VideoListServlet">课程视频</a><span>&#124;</span> <a
-						href="DocListServlet">课程课件</a><span>&#124;</span> <a
-						href="forum.jsp">互动中心</a><span>&#124;</span> <a href="about.jsp">关于</a><span>&#124;</span>
+					<a class="first" href="index.jsp">主页</a><span></span> <a
+						href="VideoListServlet">课程视频</a><span></span> <a
+						href="DocListServlet">课程课件</a><span></span> <a
+						href="forum.jsp">互动中心</a><span></span> <a href="about.jsp">关于</a><span></span>
 					<a href="contact.html">Contact</a>
 				</div>
 				<div class="span3 smedia">

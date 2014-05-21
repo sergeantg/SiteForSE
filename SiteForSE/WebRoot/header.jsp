@@ -10,16 +10,6 @@
 			<a class="brand" href="index.jsp" title="Home"><img src="img/content/logo.png" alt="mentor" /></a>
 			<div class="nav-collapse">
 				
-			  <!--social media icons-->
-	            <div class="smedia">
-	                
-	              <span>Call Us +44 123 456 78</span>
-	              <a href="#" data-rel="tooltip" data-position="bottom" title="Get RSS Feed"  class="sm-icon sm-icon-rss"></a>
-	              <a href="contact.html" data-rel="tooltip" data-position="bottom" title="Quick Email"  class="sm-icon sm-icon-email"></a>
-	              <a href="https://twitter.com/#!/pixelentity" data-position="bottom" data-rel="tooltip" title="Follow Us"  class="sm-icon sm-icon-twitter"></a>
-	                
-	            </div>
-				
 				<!--main nav-->
 				<ul class="nav">
 					<li><a href="index.jsp">主页</a></li>

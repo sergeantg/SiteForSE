@@ -206,7 +206,7 @@
 	<%@include file="footer.jsp"%>
 
 	<!--back to top button-->
-    <a href="#top" id="peBackToTop" class="label btt disabled"><span
+    <a href="#top" id="peBackToTop" class="label btt "><span
         class="icon-chevron-up icon-white"></span> </a>
 
     <!-- import minified javascript -->

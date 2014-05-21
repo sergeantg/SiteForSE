@@ -5558,7 +5558,7 @@ a.thumbnail:hover {
 
 .navbar .nav {
 	float: right;
-	margin-top: 83px
+	margin-top: 33px
 }
 
 .navbar .nav>li {
@@ -7936,14 +7936,16 @@ footer .footerLower {
 }
 
 .copyright p {
-	color: #bbb
+	color: #bbb;
+	font-size:18px;
 }
 
 .footerLower .footNav a {
 	float: left;
 	padding: 4px 6px;
 	margin: 0 4px;
-	color: #999
+	color: #999;
+	font-size: 16px;
 }
 
 .footerLower .footNav span {

@@ -11,29 +11,26 @@
 
 	<%@include file="header.jsp"%>
 	<!--main content-->
-	<section class="mainContentWrap">
+      <section class="mainContentWrap">
 		<div class="container mainContent">
-			<div class="row-fluid">
-				<div class="span12">
+		 			<div class="row-fluid">
+				         <div class="span12">
 
 
-					<!--alert error-->
-					<div class="alert alert-block alert-error fade in">
-						<h4>The Page You Are Looking For Cannot Be Found</h4>
-						<br />
-						<p>Anim pariatur cliche reprehenderit, enim eiusmod high life
-							accusamus terry richardson ad squid. 3 wolf moon officia aute,
-							non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-							laborum eiusmod.</p>
-						<br /> <a href="contact.html" class="btn btn-danger">Home</a> <a
-							href="contact.html" class="btn btn-danger">Contact</a>
-					</div>
+
+                          <a href="#"><img src="img/content/slide1.jpg" alt="Image" /></a>
+
+
+
+					      </div>
 
 
 				</div>
 			</div>
-		</div>
+	
 	</section>
+
+
 
 	<!--footer-->
 	<%@include file="footer.jsp"%>
