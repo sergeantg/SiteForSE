@@ -59,7 +59,7 @@
 			<li><a href="http://mooc.guokr.com/post/?page=2">下一页</a></li>
 			<li><a href="http://mooc.guokr.com/post/?page=154">末页</a></li>
 		</ul>
-		</div>
+	
 	</section>
 	<%@include file="footer.jsp"%></body>
 </html>
