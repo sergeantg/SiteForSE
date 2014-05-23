@@ -14,7 +14,10 @@
 		<div class="container mainContent">
 			<div class="row-fluid">
 
-				<div id="video" class="span12" align ="center">
+				<div  class="span12" >
+					<div id="video" class="videoWrapper sixteenBYnine " align ="center">
+						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -32,7 +35,7 @@
 	<script type="text/javascript" src="js/mentor.min.js"></script>
 	<script type="text/javascript" src="preview/preview.js"></script>
 	<script type="text/javascript">
-	    var t =  '<iframe height=498 width=510  src="http://player.youku.com/embed/XNzEwNzY4NzUy" frameborder=0 allowfullscreen></iframe>';
+	    var t =  '<iframe height=100% width=100%  src="http://player.youku.com/embed/XNzEwNzY4NzUy" frameborder=0 allowfullscreen></iframe>';
         document.getElementById('video').innerHTML= t;
     </script>
 

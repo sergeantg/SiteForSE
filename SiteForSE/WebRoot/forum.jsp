@@ -61,5 +61,13 @@
 		</ul>
 	
 	</section>
-	<%@include file="footer.jsp"%></body>
+	<%@include file="footer.jsp"%>
+
+		    <a href="#top" id="peBackToTop" class="label btt disabled"><span
+        class="icon-chevron-up icon-white"></span> </a>
+
+    <!-- import minified javascript -->
+    <script type="text/javascript" src="js/mentor.min.js"></script>
+    <script type="text/javascript" src="preview/preview.js"></script>
+</body>
 </html>

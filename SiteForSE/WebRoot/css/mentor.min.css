@@ -1166,7 +1166,7 @@ label {
 input,textarea,select,.uneditable-input {
 	font-family: "微软雅黑";
 	display: inline-block;
-	width: 580px;
+	width: 100%;
 	height: 40px;
 	padding: 4px;
 	margin-bottom: 12px;

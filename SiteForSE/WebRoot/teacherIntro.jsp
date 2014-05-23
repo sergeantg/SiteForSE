@@ -59,18 +59,20 @@
 									<h1>教师介绍</h1>
 								</div>
 							</div>
+						<div class="row-fluid">
 							<div class="span6 peIsotopeItem filter-lightbox filter-image">
 
 								<div class="portfolioItem">
 
 									<img src="img/hanzhi.jpg" alt="project" /> <span></span>
 									<div class="title">
-										<a href="#">韩智</a>
+										<a href="http://cs.nankai.edu.cn/Teachers/CSIntroduce.aspx?TID=hanzhi">韩智</a>
 									</div>
 									<p>南开大学软件学院</p>
 								</div>
 							</div>
 
+						</div>
 
 							<div class="row-fluid">
 								<div class="span12">
@@ -206,7 +208,7 @@
 	<%@include file="footer.jsp"%>
 
 	<!--back to top button-->
-    <a href="#top" id="peBackToTop" class="label btt "><span
+    <a href="#top" id="peBackToTop" class="label btt disabled"><span
         class="icon-chevron-up icon-white"></span> </a>
 
     <!-- import minified javascript -->
