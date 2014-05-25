@@ -5,6 +5,7 @@
 
 <head>
 <%@include file="head.jsp"%>
+<title>软件工程在线学习</title>>
 </head>
 
 <body>

@@ -62,10 +62,28 @@
 		<servlet-name>AdminPostServlet</servlet-name>
 		<servlet-class>com.siteforse.servlet.AdminPostServlet</servlet-class>
 	</servlet>
-  <servlet>
-    <servlet-name>AdminReplyServlet</servlet-name>
-    <servlet-class>com.siteforse.servlet.AdminReplyServlet</servlet-class>
-  </servlet>
+	<servlet>
+		<servlet-name>AdminReplyServlet</servlet-name>
+		<servlet-class>com.siteforse.servlet.AdminReplyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PostServlet</servlet-name>
+		<servlet-class>com.siteforse.servlet.PostServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ReplyServlet</servlet-name>
+		<servlet-class>com.siteforse.servlet.ReplyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>VideoUploadServelt</servlet-name>
+		<servlet-class>com.siteforse.servlet.VideoUploadServelt</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DelVideoServlet</servlet-name>
+		<servlet-class>com.siteforse.servlet.DelVideoServlet</servlet-class>
+	</servlet>
+
+
 
 	<servlet-mapping>
 		<servlet-name>AdminLoginServlet</servlet-name>
@@ -95,8 +113,24 @@
 		<servlet-name>AdminPostServlet</servlet-name>
 		<url-pattern>/admin/PostServlet</url-pattern>
 	</servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>AdminReplyServlet</servlet-name>
-    <url-pattern>/admin/ReplyServlet</url-pattern>
-  </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminReplyServlet</servlet-name>
+		<url-pattern>/admin/ReplyServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PostServlet</servlet-name>
+		<url-pattern>/PostServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReplyServlet</servlet-name>
+		<url-pattern>/ReplyServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>VideoUploadServelt</servlet-name>
+		<url-pattern>/VideoUploadServelt</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DelVideoServlet</servlet-name>
+		<url-pattern>/admin/DelVideoServlet</url-pattern>
+	</servlet-mapping>
 </web-app>

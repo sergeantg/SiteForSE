@@ -5,6 +5,7 @@
 
 <head>
 <%@include file="head.jsp"%>
+<title>教材简介</title>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 			<ul class="breadcrumb">
 				<li><a href="#">关于</a> <span class="divider">/</span>
 				</li>
-				<li><a href="teacherIntro.jsp">教材简介</a> <span class="divider">/</span>
+				<li><a href="texbookIntro.jsp">教材简介</a> <span class="divider">/</span>
 				</li>
 			</ul>
 
