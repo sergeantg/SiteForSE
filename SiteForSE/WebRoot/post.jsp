@@ -31,7 +31,7 @@
                     <div class="row-fluid">
                         <div class="span2">内容</div>
                         <div class="span10">
-                            <textarea class="neirong" name="content" id="content" rows="20"
+                            <textarea class="neirong" name="content" id="content" rows="18"
                                 rols="40" placeholder="请在此处输入你的内容"></textarea>
                                  <div class="form-do">
                                     <input type="submit" class="btn btn-info btn-large" value="发布"/>

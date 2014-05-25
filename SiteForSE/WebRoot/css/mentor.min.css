@@ -3912,7 +3912,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini {
 }
 
 .breadcrumb {
-	width: 940px;
+	width: 100%;
 	padding: 7px 14px;
 	margin: 0 0 18px;
 	list-style: none;
@@ -8299,11 +8299,17 @@ a.peVideo video,a.peVideo iframe {
 
 .videoWrapper {
 	position: relative;
-	height: 0;
-	margin-bottom: 20px;
-	overflow: hidden
+	overflow: hidden;
+	display: block;
+	width: 100%!important;
+	height: 90%!important;
 }
 
+iframe.videoWrapper
+{
+	width: 100%;
+	height:100%;
+}
 .videoWrapper a.peVideo {
 	position: absolute;
 	top: 0;

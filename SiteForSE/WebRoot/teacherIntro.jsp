@@ -13,11 +13,13 @@
 	<!--main content-->
 	<section class="mainContentWrap">
 		<div class="container mainContent">
+			
 			<ul class="breadcrumb">
 				<li><a href="#">关于</a> <span class="divider">/</span></li>
 				<li><a href="teacherIntro.jsp">教师介绍</a> <span class="divider">/</span>
 				</li>
 			</ul>
+
 
 			<div class="row-fluid">
 
@@ -27,6 +29,7 @@
 				<aside class="span3 sidebar">
 
 					<div class="well" style="padding: 16px 0;">
+						<div class="row-fluid">
 						<ul class="nav nav-list">
 							<li class="nav-header">关于</li>
 							<li class="active"><a href="teacherIntro.jsp"><i
@@ -43,6 +46,7 @@
 							<li class="divider"></li>
 
 						</ul>
+					</div>
 					</div>
 
 				</aside>
