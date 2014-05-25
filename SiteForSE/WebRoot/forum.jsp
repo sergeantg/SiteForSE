@@ -4,7 +4,14 @@
 <%@ include file="declar.jsp"%>
 <%@ page import="com.siteforse.biz.PostBiz"%>
 <%
-	request.setAttribute("postList", new PostBiz().getAll());
+	int index = 1;
+	System.out.println("index:"+request.getParameter("index"));
+	if(request.getParameter("index")!=null&&request.getParameter("index")!=""){
+
+		index = Integer.parseInt(request.getParameter("index"));
+		System.out.println("after if :index:"+index);
+	}
+	request.setAttribute("postList", new PostBiz().getAllByPage(index));
 %>
 <html>
 <head>
@@ -35,12 +42,19 @@
 			</div>
 
 			<ul class="discuss_list">
+					<li>
+						<h3 class="discuss-title">【标题】
+								<span class="icon-jing"></span>
+						</h3> 
+						<span class="discuss-num">回复数</span> 
+						<span class="discuss-time">发表时间</span>
+					</li>
 				<c:forEach items="${postList }" var="item">
 					<li>
 						<h3 class="discuss-title">
 						 <a href="postDetail.jsp?postID=${item.postID }"
 								target="_blank"
-								data-gaevent="post_list-list-title:v3.0.0.0:academy">${item.title}</a> 
+								data-gaevent="post_list-list-title:v3.0.0.0:academy">【${item.title}】</a> 
 								<span class="icon-jing"></span>
 						</h3> 
 						<span class="discuss-num">${item.replyCount }</span> 
@@ -50,24 +64,12 @@
 			</ul>
 		</div>
 		<ul class="pagination">
-			<li class="active"><span>1</span></li>
-			<li><a href="http://mooc.guokr.com/post/?page=2">2</a></li>
-			<li><a href="http://mooc.guokr.com/post/?page=3">3</a></li>
-			<li><a href="http://mooc.guokr.com/post/?page=4">4</a></li>
-			<li><a href="http://mooc.guokr.com/post/?page=5">5</a></li>
+			<li><a href="forum.jsp?index=1">首页</a></li>
+			<li><a href="forum.jsp?index=<%=(index-1)<1?1:(index-1) %>">上一页</a></li>
 			<li><span>...</span></li>
-			<li><a href="http://mooc.guokr.com/post/?page=2">下一页</a></li>
-			<li><a href="http://mooc.guokr.com/post/?page=154">末页</a></li>
+			<li><a href="forum.jsp?index=<%=index+1 %>">下一页</a></li>
 		</ul>
 	
 	</section>
-	<%@include file="footer.jsp"%>
-
-		    <a href="#top" id="peBackToTop" class="label btt disabled"><span
-        class="icon-chevron-up icon-white"></span> </a>
-
-    <!-- import minified javascript -->
-    <script type="text/javascript" src="js/mentor.min.js"></script>
-    <script type="text/javascript" src="preview/preview.js"></script>
-</body>
+	<%@include file="footer.jsp"%></body>
 </html>

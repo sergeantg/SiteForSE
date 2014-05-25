@@ -7,12 +7,14 @@ import com.siteforse.dao.*;
 import com.siteforse.entity.*;
 
 public class DocBiz {
+	int pageSize;
 	private DocDao dao;
 	private Doc doc;
 	ArrayList<Doc> list;
 
 	public DocBiz() {
 		super();
+		pageSize = 20;
 		dao = new DocDao();
 		doc = new Doc();
 		list = new ArrayList<Doc>();
@@ -25,6 +27,10 @@ public class DocBiz {
 	public ArrayList<Doc> getDocList() {
 		list = dao.getAll();
 		return list;
+	}
+	
+	public ArrayList<Doc> getAllByPage(int index){
+		return dao.getAllByPage(index, pageSize);
 	}
 	
 	public int add(Doc doc){

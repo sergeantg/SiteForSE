@@ -17,7 +17,7 @@
             </div>
 
 
-            <form id="newPost" class="form" action="" method="post">
+            <form id="newPost" class="form" action="PostServelt" method="post">
                 <div class="row-fluid">
                     <div class="span2">标题</div>
                             <div class="span10">

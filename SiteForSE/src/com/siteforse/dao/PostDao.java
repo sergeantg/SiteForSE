@@ -75,6 +75,29 @@ public class PostDao extends BaseDao {
 		return list;
 	}
 
+	public ArrayList<Post> getAllByPage(int index, int pageSize) {
+		sql = "SELECT * FROM post LIMIT ?,?";
+		openConn();
+		createPst(sql);
+
+		try {
+			pst.setInt(1, (index-1)*pageSize);
+			pst.setInt(2, index*pageSize);
+			query();
+			while (rs.next()) {
+				list.add(new Post(rs.getInt("POST_ID"), rs.getInt("UID"), rs.getString("TITLE"),
+						rs.getString("CONTENT"), rs.getInt("REPLY_COUNT"), rs
+								.getTimestamp("POST_TIME")));
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeConn();
+		}
+		return list;
+	}
+	
 	public ArrayList<Reply> getReply(int ID) {
 		sql = "SELECT * FROM reply WHERE POST_ID=?";
 		openConn();

@@ -66,9 +66,8 @@ public class AdminPostServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.setContentType("text/html;charset=UTF-8");
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
+		
 		String title = "";
 		String content = "";
 		if (request.getParameter("title") != null) {

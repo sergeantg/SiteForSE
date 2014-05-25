@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.siteforse.biz.PostBiz;
 
-public class AdminReplyServlet extends HttpServlet {
+public class PostServlet extends HttpServlet {
 
 	/**
 	 * Constructor of the object.
 	 */
-	public AdminReplyServlet() {
+	public PostServlet() {
 		super();
 	}
 
@@ -29,17 +29,13 @@ public class AdminReplyServlet extends HttpServlet {
 
 	/**
 	 * The doGet method of the servlet. <br>
-	 * 
+	 *
 	 * This method is called when a form has its tag value method equals to get.
 	 * 
-	 * @param request
-	 *            the request send by the client to the server
-	 * @param response
-	 *            the response send by the server to the client
-	 * @throws ServletException
-	 *             if an error occurred
-	 * @throws IOException
-	 *             if an error occurred
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -49,18 +45,13 @@ public class AdminReplyServlet extends HttpServlet {
 
 	/**
 	 * The doPost method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to post.
 	 * 
-	 * This method is called when a form has its tag value method equals to
-	 * post.
-	 * 
-	 * @param request
-	 *            the request send by the client to the server
-	 * @param response
-	 *            the response send by the server to the client
-	 * @throws ServletException
-	 *             if an error occurred
-	 * @throws IOException
-	 *             if an error occurred
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -68,32 +59,30 @@ public class AdminReplyServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
-		Integer postID = 0;
+		String title = "";
 		String content = "";
-		if (request.getParameter("postID") != null&&request.getParameter("postID")!="") {
-			postID = Integer.parseInt(request.getParameter("postID"));
+		if (request.getParameter("title") != null) {
+			title = request.getParameter("title");
 		}
 		if (request.getParameter("content") != null) {
 			content = request.getParameter("content");
 		}
 		PostBiz biz = new PostBiz();
-		if (biz.addReplyAdimin(postID, content) == 1) {
-			//out.print("y");
+		if (biz.addPost(title, content) == 1) {
 			out.print("<script type='text/javascript'>window.alert('发表成功！');"
-					+ "window.document.location.href='postDetail.jsp?postID="+postID+"';</script>");
+					+ "window.document.location.href='forum.jsp';</script>");
 		} else
-			//out.print("n");
 			out.print("<script type='text/javascript'>window.alert('发表失败！');"
-					+ "window.document.location.href='postDetail.jsp?postID="+postID+"';</script>");
+					+ "window.document.location.href='post.jsp';</script>");
+
 		out.flush();
 		out.close();
 	}
 
 	/**
 	 * Initialization of the servlet. <br>
-	 * 
-	 * @throws ServletException
-	 *             if an error occurs
+	 *
+	 * @throws ServletException if an error occurs
 	 */
 	public void init() throws ServletException {
 		// Put your code here

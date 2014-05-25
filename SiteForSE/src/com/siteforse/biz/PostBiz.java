@@ -8,8 +8,14 @@ import com.siteforse.entity.Reply;
 
 public class PostBiz {
 
-	private PostDao dao = new PostDao();
+	private int pageSize;
+	private PostDao dao;
 
+	public PostBiz(){
+		super();
+		pageSize = 20;
+		dao = new PostDao();
+	}
 	public Post getPost(int ID) {
 		ArrayList<Post> temp = new ArrayList<Post>();
 		temp = dao.get(ID);
@@ -21,6 +27,11 @@ public class PostBiz {
 	public ArrayList<Post> getAll(){
 		return dao.getAll();
 	}
+	
+	public ArrayList<Post> getAllByPage(int index){
+		return dao.getAllByPage(index, pageSize);
+	}
+	
 	public ArrayList<Reply> getReply(int ID) {
 		return dao.getReply(ID);
 	}
