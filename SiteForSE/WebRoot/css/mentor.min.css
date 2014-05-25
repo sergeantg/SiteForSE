@@ -526,7 +526,9 @@ img {
 	height: auto;
 	border: 0;
 	-ms-interpolation-mode: bicubic;
-	vertical-align: middle
+	vertical-align: middle;
+	margin-bottom: 2px;
+
 }
 
 button,input,select,textarea {
@@ -5558,7 +5560,7 @@ a.thumbnail:hover {
 
 .navbar .nav {
 	float: right;
-	margin-top: 33px
+	margin-top: 46px
 }
 
 .navbar .nav>li {

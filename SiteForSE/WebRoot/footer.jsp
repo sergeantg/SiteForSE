@@ -18,14 +18,8 @@
 					<a href="contact.html">Contact</a>
 				</div>
 				<div class="span3 smedia">
-					<a href="#" data-rel="tooltip" title="Pinterest"
-						class="sm-icon sm-icon-pinterest"></a> <a href="#"
-						data-rel="tooltip" title="Dribbble"
-						class="sm-icon sm-icon-dribbble"></a> <a href="#"
-						data-rel="tooltip" title="Skype" class="sm-icon sm-icon-skype"></a>
-					<a href="#" data-rel="tooltip" title="Facebook"
-						class="sm-icon sm-icon-facebook"></a> <a href="#"
-						data-rel="tooltip" title="Vimeo" class="sm-icon sm-icon-vimeo"></a>
+					<p>地址：天津市卫津路94号</p>
+					<p>邮编：300071</p>
 				</div>
 			</div>
 		</div>

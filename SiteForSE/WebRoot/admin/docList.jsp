@@ -65,8 +65,7 @@ request.setAttribute("docList", new DocBiz().getDocList());
 			<div class="container">
 				<div class="mws-panel grid_8">
 					<div class="mws-panel-header">
-						<span class="mws-i-24 i-table-1">Data Table with Numbered
-							Pagination</span>
+						<span class="mws-i-24 i-table-1">课件列表</span>
 						</div>
 						<div class="mws-panel-body">
 							<table class="mws-datatable-fn mws-table">

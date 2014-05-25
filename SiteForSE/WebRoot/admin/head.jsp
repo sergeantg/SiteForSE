@@ -61,3 +61,6 @@
 <script type="text/javascript" src="js/mws.js"></script>
 <script type="text/javascript" src="js/demo.js"></script>
 <script type="text/javascript" src="js/themer.js"></script>
+
+<!-- favicon & iSO touch icons -->
+<link rel="shortcut icon" type="image/x-icon"  href="favicon.icon" />

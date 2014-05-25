@@ -53,7 +53,7 @@
 */
 
         // document.getElementById("tudou").src="http://player.youku.com/embed/XNzEwNzY4NzUy";
-        // document.getElementById("tudou").height=document.body.clientWidth/2.2;
+        document.getElementById("tudou").height=document.body.clientWidth/2.2;
 
         // var nvideo=document.createElement("video");
         // var src1=document.createElement("source");
@@ -70,9 +70,6 @@
         // parent.removeChild(child);
 
 
-        var t="<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=2&code=FNipbkFDN7s&lcode=jWSNic77QEY&resourceId=323281014_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:480px;height:400px;"></iframe>"
-
-        alert(t.substr("));
 
         
         

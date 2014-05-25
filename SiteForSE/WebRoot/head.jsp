@@ -28,4 +28,4 @@
 </script>
 
 <!-- favicon & iSO touch icons -->
-<link rel="shortcut icon" href="favicon.jpg" />
+<link rel="shortcut icon" type="image/x-icon"  href="favicon.icon" />

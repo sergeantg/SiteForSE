@@ -18,14 +18,14 @@
 
 
 
-                          <a href="#"><img src="img/content/slide1.jpg" alt="Image" /></a>
+                          <a href="#"><img src="img/content/SoftwareEngineering.jpg" alt="Image" /></a>
 
 
 
 					      </div>
 
 
-				</div>
+				    </div>
 			</div>
 	
 	</section>
