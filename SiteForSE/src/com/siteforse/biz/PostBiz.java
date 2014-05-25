@@ -16,6 +16,11 @@ public class PostBiz {
 		pageSize = 20;
 		dao = new PostDao();
 	}
+	public PostBiz(int size){
+		super();
+		pageSize = size;
+		dao = new PostDao();
+	}
 	public Post getPost(int ID) {
 		ArrayList<Post> temp = new ArrayList<Post>();
 		temp = dao.get(ID);
@@ -24,6 +29,9 @@ public class PostBiz {
 		return new Post();
 	}
 
+	public int getCount(){
+		return dao.getCount();
+	}
 	public ArrayList<Post> getAll(){
 		return dao.getAll();
 	}

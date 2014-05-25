@@ -24,6 +24,10 @@ public class DocBiz {
 		return dao.getDoc(docID).get(0);
 	}
 
+	public int getCount(){
+		return dao.getCount();
+	}
+	
 	public ArrayList<Doc> getDocList() {
 		list = dao.getAll();
 		return list;

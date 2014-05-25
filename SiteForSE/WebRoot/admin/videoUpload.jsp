@@ -39,7 +39,7 @@
                     </div>
                     <div class="mws-panel-body">
                         <form class="mws-form" action="/SiteForSE/admin/VideoUploadServlet"
-                            method="post" enctype="multipart/form-data">
+                            method="post">
                             <div class="mws-form-row">
                                 <label>视频名称</label>
                                 <div class="mws-form-item large">

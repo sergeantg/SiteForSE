@@ -1,18 +1,25 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ include file="declar.jsp"%>
 <%@ page import="com.siteforse.biz.PostBiz"%>
+<%@ page import="com.siteforse.entity.Page"%>
+
+<%@ include file="declar.jsp"%>
+
 <%
 	int index = 1;
-	System.out.println("index:" + request.getParameter("index"));
+	Page myPage = new Page();
+	if (request.getAttribute("page") != null) {
+		myPage = (Page) request.getAttribute("page");
+	} else {
+		myPage = new Page(20, new PostBiz(20).getCount());
+	}
 	if (request.getParameter("index") != null
 			&& request.getParameter("index") != "") {
 
 		index = Integer.parseInt(request.getParameter("index"));
-		System.out.println("after if :index:" + index);
 	}
-	request.setAttribute("postList", new PostBiz().getAllByPage(index));
+	request.setAttribute("postList", new PostBiz(20).getAllByPage(index));
 %>
 <html>
 <head>
@@ -62,11 +69,24 @@
 		<ul class="pagination">
 			<li><a href="forum.jsp?index=1">首页</a>
 			</li>
-			<li><a href="forum.jsp?index=<%=(index - 1) < 1 ? 1 : (index - 1)%>">上一页</a>
+			<li><a href="forum.jsp?index=<%=myPage.prePage(index)%>">上一页</a>
 			</li>
-			<li><span>...</span>
+			<%
+				for (int i = 1; i <= myPage.getPageCount(); i++) {
+					if (index == i) {
+			%>
+			<li class="active"><span><%=i%></span></li>
+			<%
+				} else {
+			%>
+			<li><a href="forum.jsp?index=<%=i%>"><%=i%></a></li>
+			<%
+				}
+				}
+			%>
+			<li><a href="forum.jsp?index=<%=myPage.nextPage(index)%>">下一页</a>
 			</li>
-			<li><a href="forum.jsp?index=<%=index + 1%>">下一页</a>
+			<li><a href="forum.jsp?index=<%=myPage.getPageCount()%>">末页</a>
 			</li>
 		</ul>
 

@@ -89,6 +89,9 @@
                         <div class="mws-panel-content">
                             <c:forEach items="${replyList }" var="item">
                                 <h5>${item.postTime}</h5>
+                                <c:if test="${item.uid==1}">
+                                <h3>管理员</h3>
+                                </c:if>
                                 <p>${item.content}</p>
                             </c:forEach>
                         </div>
