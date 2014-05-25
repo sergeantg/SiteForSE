@@ -12,7 +12,7 @@
 
 				<div class="span6 footNav">
 					<a class="first" href="index.jsp">主页</a><span></span> <a
-						href="videoWatch.jsp">课程视频</a><span></span> <a
+						href="videoList.jsp">课程视频</a><span></span> <a
 						href="docList.jsp">课程课件</a><span></span> <a
 						href="forum.jsp">互动中心</a><span></span> <a href="about.jsp">关于</a><span></span>
 					<a href="contact.html">Contact</a>

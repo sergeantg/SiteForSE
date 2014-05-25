@@ -6592,7 +6592,7 @@ header .smedia span {
 }
 
 .mainContent {
-	padding-top: 60px;
+	padding-top: 20px;
 	border-top: 2px solid #fff
 }
 
@@ -7604,7 +7604,7 @@ input:focus,textarea:focus {
 }
 
 footer {
-	margin-top: 60px;
+	margin-top: 60px; /*有点大*/
 	border-top: 1px solid #e3e3e3;
 	background: #fff
 }
@@ -7880,7 +7880,7 @@ footer .widget_stats {
 .mainContent .discuss_list .discuss-title {
 	float: left;
 	font-size: 16px;
-	width: 480px;
+	width: 52%;
 	margin-right: 20px;
 	margin-bottom: 1px
 }

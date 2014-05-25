@@ -2,8 +2,7 @@
 <%@include file="declar.jsp"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="com.siteforse.biz.videoBiz"%>
-
+<%@ page import="com.siteforse.biz.VideoBiz"%>
 <%
 	request.setAttribute("videoList", new VideoBiz().getList());
 %>
@@ -26,15 +25,14 @@
 						<thead>
 							<tr>
 								<th>名称</th>
-								<th>添加日期</th>
+								<th>添加时间</th>
 							</tr>
 						</thead>
 						<tbody>
 							<c:forEach items="${videoList }" var="item">
 								<tr>
-									<td class="muted"><a
-										href="videoWatch.jsp?p=${item.path}" target="_blank">${item.name }</a>
-									</td>
+									<td class="muted"><a href="videoWatch.jsp?p=${item.path}"
+										target="_blank">${item.name }</a></td>
 									<td>${item.addDate}</td>
 								</tr>
 							</c:forEach>

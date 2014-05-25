@@ -127,7 +127,7 @@
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>VideoUploadServelt</servlet-name>
-		<url-pattern>/VideoUploadServelt</url-pattern>
+		<url-pattern>/admin/VideoUploadServelt</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>DelVideoServlet</servlet-name>
