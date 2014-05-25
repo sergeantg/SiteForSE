@@ -28,6 +28,48 @@ public class VideoDao extends BaseDao {
 		return list;
 	}
 
+	public ArrayList<Video> getAllByPage(int index, int pageSize) {
+		sql = "SELECT * FROM video LIMIT ?,?";
+		openConn();
+		createPst(sql);
+
+		try {
+			pst.setInt(1, (index-1)*pageSize);
+			pst.setInt(2, index*pageSize);
+			query();
+			while (rs.next()) {
+				list.add(new Video(rs.getInt("VIDEO_ID"), rs.getString("NAME"),
+						rs.getDate("ADD_DATE"), rs.getString("PATH")));
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeConn();
+		}
+		return list;
+	}
+	
+	public int getCount(){
+		int count = 0;
+		sql = "SELECT count(POST_ID) FROM post";
+		openConn();
+		createPst(sql);
+
+		try {
+			query();
+			while (rs.next()) {
+				count = rs.getInt(1);
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeConn();
+		}
+		return count;
+	}
+	
 	public Video get(int id) {
 		sql = "SELECT * FROM video WHERE VIDEO_ID=?";
 

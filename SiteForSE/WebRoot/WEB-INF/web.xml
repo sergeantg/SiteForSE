@@ -75,8 +75,8 @@
 		<servlet-class>com.siteforse.servlet.ReplyServlet</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>VideoUploadServelt</servlet-name>
-		<servlet-class>com.siteforse.servlet.VideoUploadServelt</servlet-class>
+		<servlet-name>VideoUploadServlet</servlet-name>
+		<servlet-class>com.siteforse.servlet.VideoUploadServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>DelVideoServlet</servlet-name>
@@ -126,8 +126,8 @@
 		<url-pattern>/ReplyServlet</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>VideoUploadServelt</servlet-name>
-		<url-pattern>/admin/VideoUploadServelt</url-pattern>
+		<servlet-name>VideoUploadServlet</servlet-name>
+		<url-pattern>/admin/VideoUploadServlet</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>DelVideoServlet</servlet-name>

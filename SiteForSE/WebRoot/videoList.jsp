@@ -3,8 +3,22 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="com.siteforse.biz.VideoBiz"%>
+<%@ page import="com.siteforse.entity.Page"%>
+
 <%
-	request.setAttribute("videoList", new VideoBiz().getList());
+	int index = 1;
+	Page myPage = new Page();
+	if (request.getAttribute("page") != null) {
+		myPage = (Page)request.getAttribute("page");
+	}else{
+		myPage = new Page(20, new VideoBiz().getCount());
+	}
+	if (request.getParameter("index") != null
+			&& request.getParameter("index") != "") {
+
+		index = Integer.parseInt(request.getParameter("index"));	
+	}
+	request.setAttribute("videoList", new VideoBiz().getAllByPage(index));
 %>
 
 <html>
@@ -31,8 +45,10 @@
 						<tbody>
 							<c:forEach items="${videoList }" var="item">
 								<tr>
-									<td class="muted"><a href="videoWatch.jsp?p=${item.path}"
-										target="_blank">${item.name }</a></td>
+									<td class="muted"><a
+										href="videoWatch.jsp?id=${item.videoID}" target="_blank">${item.name
+											}</a>
+									</td>
 									<td>${item.addDate}</td>
 								</tr>
 							</c:forEach>
@@ -41,6 +57,29 @@
 				</div>
 			</div>
 		</div>
+		<ul class="pagination">
+			<li><a href="videoList.jsp?index=1">首页</a>
+			</li>
+			<li><a href="videoList.jsp?index=<%=myPage.prePage(index)%>">上一页</a>
+			</li>
+			<%
+				for (int i = 1; i <= myPage.getPageCount(); i++) {
+					if (index == i) {
+			%>
+			<li class="active"><span><%=i%></span></li>
+			<%
+				} else {
+			%>
+			<li><a href="videoList.jsp?index=<%=i%>"><%=i%></a></li>
+			<%
+				}
+				}
+			%>
+			<li><a href="videoList.jsp?index=<%=myPage.nextPage(index)%>">下一页</a>
+			</li>
+			<li><a href="videoList.jsp?index=<%=myPage.getPageCount()%>">末页</a>
+			</li>
+		</ul>
 	</section>
 	<%@include file="footer.jsp"%>
 	<!--back to top button-->

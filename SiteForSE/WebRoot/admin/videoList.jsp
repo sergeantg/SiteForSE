@@ -79,12 +79,12 @@
 							<tbody>
 								<c:forEach items="${videoList }" var="item">
 									<tr>
-										<td class="muted"><a href="videoWatch.jsp?p=${item.path}"
+										<td class="muted"><a href="../videoWatch.jsp?id=${item.videoID}"
 											target="_blank">${item.name }</a>
 										</td>
 										<td>${item.addDate}</td>
 										<td><input type="button"
-											onclick="delDoc(${item.videoID})" value="删除"
+											onclick="delVideo(${item.videoID})" value="删除"
 											class="mws-button red small" /></td>
 									</tr>
 								</c:forEach>

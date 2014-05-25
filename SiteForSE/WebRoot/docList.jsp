@@ -3,9 +3,22 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="com.siteforse.biz.DocBiz"%>
-
+<%@ page import="com.siteforse.entity.Page"%>
 <%
-	request.setAttribute("docList", new DocBiz().getDocList());
+	int index = 1;
+	Page myPage = new Page();
+	if (request.getAttribute("page") != null) {
+		myPage = (Page)request.getAttribute("page");
+	}else{
+		myPage = new Page(20, new DocBiz().getCount());
+	}
+	if (request.getParameter("index") != null
+			&& request.getParameter("index") != "") {
+
+		index = Integer.parseInt(request.getParameter("index"));	
+	}
+
+	request.setAttribute("docList", new DocBiz().getAllByPage(index));
 %>
 
 <html>
@@ -13,7 +26,7 @@
 <head>
 
 <%@include file="head.jsp"%>
-<title>课件中心</title>>
+<title>课程课件</title>
 </head>
 
 <body>
@@ -50,6 +63,29 @@
 			</div>
 
 		</div>
+		<ul class="pagination">
+			<li><a href="docList.jsp?index=1">首页</a>
+			</li>
+			<li><a href="docList.jsp?index=<%=myPage.prePage(index)%>">上一页</a>
+			</li>
+			<%
+				for (int i = 1; i <= myPage.getPageCount(); i++) {
+					if (index == i) {
+			%>
+			<li class="active"><span><%=i%></span></li>
+			<%
+				} else {
+			%>
+			<li><a href="docList.jsp?index=<%=i%>"><%=i%></a></li>
+			<%
+				}
+				}
+			%>
+			<li><a href="docList.jsp?index=<%=myPage.nextPage(index)%>">下一页</a>
+			</li>
+			<li><a href="docList.jsp?index=<%=myPage.getPageCount()%>">末页</a>
+			</li>
+		</ul>
 	</section>
 	<%@include file="footer.jsp"%>
 

@@ -48,6 +48,26 @@ public class DocDao extends BaseDao {
 		return list;
 	}
 	
+	public int getCount(){
+		int count = 0;
+		sql = "SELECT count(POST_ID) FROM post";
+		openConn();
+		createPst(sql);
+
+		try {
+			query();
+			while (rs.next()) {
+				count = rs.getInt(1);
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeConn();
+		}
+		return count;
+	}
+	
 	public ArrayList<Doc> getAllByPage(int index, int pageSize) {
 		sql = "SELECT * FROM doc LIMIT ?,?";
 		openConn();

@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.siteforse.biz.VideoBiz;
 import com.siteforse.entity.Video;
 
-public class VideoUploadServelt extends HttpServlet {
+public class VideoUploadServlet extends HttpServlet {
 
 	/**
 	 * Constructor of the object.
 	 */
-	public VideoUploadServelt() {
+	public VideoUploadServlet() {
 		super();
 	}
 
@@ -77,14 +77,14 @@ public class VideoUploadServelt extends HttpServlet {
 			name = request.getParameter("name");
 		if (request.getParameter("path") != null) {
 			path = request.getParameter("path");
-			int begin = path.indexOf("src=\"");
-			int end = path.indexOf("\"", begin + 1);
+			int begin = path.indexOf("src=\"") + 5;
+			int end = path.indexOf("\"", begin);
 			path = path.substring(begin, end);
 		}
 
 		if (biz.add(new Video(1, name, null, path)) == 1) {
 			out.print("<script type='text/javascript'>"
-					+ "var msg='上传成功！';window.alert(msg);window.document.location.href='videoUpload.jsp';"
+					+ "var msg='上传成功！';window.alert(msg);window.document.location.href='videoList.jsp';"
 					+ "</script>");
 		} else {
 			out.print("<script type='text/javascript'>"
