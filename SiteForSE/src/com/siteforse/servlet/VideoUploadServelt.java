@@ -8,14 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.siteforse.biz.PostBiz;
+import com.siteforse.biz.VideoBiz;
+import com.siteforse.entity.Video;
 
-public class ReplyServlet extends HttpServlet {
+public class VideoUploadServelt extends HttpServlet {
 
 	/**
 	 * Constructor of the object.
 	 */
-	public ReplyServlet() {
+	public VideoUploadServelt() {
 		super();
 	}
 
@@ -65,29 +66,31 @@ public class ReplyServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.setContentType("text/html;charset=UTF-8");
+		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		VideoBiz biz = new VideoBiz();
 
-		Integer postID = 0;
-		String content = "";
-		if (request.getParameter("postID") != null
-				&& request.getParameter("postID") != "") {
-			postID = Integer.parseInt(request.getParameter("postID"));
+		String name = "";
+		String path = "";
+
+		if (request.getParameter("name") != null)
+			name = request.getParameter("name");
+		if (request.getParameter("path") != null) {
+			path = request.getParameter("path");
+			int begin = path.indexOf("src=\"");
+			int end = path.indexOf("\"", begin + 1);
+			path = path.substring(begin, end);
 		}
-		if (request.getParameter("content") != null) {
-			content = request.getParameter("content");
+
+		if (biz.add(new Video(1, name, null, path)) == 1) {
+			out.print("<script type='text/javascript'>"
+					+ "var msg='上传成功！';window.alert(msg);window.document.location.href='videoUpload.jsp';"
+					+ "</script>");
+		} else {
+			out.print("<script type='text/javascript'>"
+					+ "var msg='上传失败！';window.alert(msg);window.document.location.href='videoUpload.jsp';"
+					+ "</script>");
 		}
-		PostBiz biz = new PostBiz();
-		if (biz.addReply(postID, content) == 1) {
-			// out.print("y");
-			out.print("<script type='text/javascript'>window.alert('发表成功！');"
-					+ "window.document.location.href='postDetail.jsp?postID="
-					+ postID + "';</script>");
-		} else
-			// out.print("n");
-			out.print("<script type='text/javascript'>window.alert('发表失败！');"
-					+ "window.document.location.href='postDetail.jsp?postID="
-					+ postID + "';</script>");
 		out.flush();
 		out.close();
 	}

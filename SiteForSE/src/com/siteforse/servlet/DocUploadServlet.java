@@ -40,29 +40,38 @@ public class DocUploadServlet extends HttpServlet {
 
 	/**
 	 * The doGet method of the servlet. <br>
-	 *
+	 * 
 	 * This method is called when a form has its tag value method equals to get.
 	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
+	 * @param request
+	 *            the request send by the client to the server
+	 * @param response
+	 *            the response send by the server to the client
+	 * @throws ServletException
+	 *             if an error occurred
+	 * @throws IOException
+	 *             if an error occurred
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		doPost( request, response);
+		doPost(request, response);
 	}
 
 	/**
 	 * The doPost method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to post.
 	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
+	 * This method is called when a form has its tag value method equals to
+	 * post.
+	 * 
+	 * @param request
+	 *            the request send by the client to the server
+	 * @param response
+	 *            the response send by the server to the client
+	 * @throws ServletException
+	 *             if an error occurred
+	 * @throws IOException
+	 *             if an error occurred
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -72,14 +81,14 @@ public class DocUploadServlet extends HttpServlet {
 		Doc doc = new Doc();
 		PrintWriter out = response.getWriter();
 		response.setCharacterEncoding("UTF-8");
-		
+
 		File saveDir = UploadImg.upImgSaveDir(request, "doc/upload");
 		File tempDir = UploadImg.upImgTempDir(request, "doc/temp");
 		Iterator ite = UploadImg.upImgIte(request, saveDir, tempDir);
-		
+
 		while (ite != null && ite.hasNext()) {
 			FileItem fi = (FileItem) ite.next();
-			
+
 			if (fi.isFormField()) {
 				if ("name".equals(fi.getFieldName())) {
 					doc.setName(fi.getString("UTF-8"));
@@ -87,7 +96,7 @@ public class DocUploadServlet extends HttpServlet {
 			} else if (!fi.isFormField()) {
 				String fileExt = fi.getName().substring(
 						fi.getName().lastIndexOf("."));
-				fileName ="/"+System.currentTimeMillis() + ""
+				fileName = "/" + System.currentTimeMillis() + ""
 						+ Math.abs((new Random()).nextInt()) + fileExt;
 
 				BufferedInputStream in = new BufferedInputStream(
@@ -96,28 +105,28 @@ public class DocUploadServlet extends HttpServlet {
 						new FileOutputStream(new File(saveDir + fileName)));
 				Streams.copy(in, bout, true);
 
-				
-				fileName = "/SiteForSE/doc/upload"+fileName;
+				fileName = "/SiteForSE/doc/upload" + fileName;
 				doc.setPath(fileName);
 			}
-			
+
 		}
-		if(biz.add(doc)==1){  
-			out.print("<script type='text/javascript'>" +
-					"var msg='successed！';window.alert(msg);window.document.location.href='docUpload.jsp';" +
-					"</script>");
-		}else{
-			out.print("<script type='text/javascript'>" +
-					"var msg='failed！';window.alert(msg);window.document.location.href='docUpload.jsp';" +
-					"</script>");
+		if (biz.add(doc) == 1) {
+			out.print("<script type='text/javascript'>"
+					+ "var msg='上传成功！';window.alert(msg);window.document.location.href='docUpload.jsp';"
+					+ "</script>");
+		} else {
+			out.print("<script type='text/javascript'>"
+					+ "var msg='上传失败！';window.alert(msg);window.document.location.href='docUpload.jsp';"
+					+ "</script>");
 		}
 
 	}
 
 	/**
 	 * Initialization of the servlet. <br>
-	 *
-	 * @throws ServletException if an error occurs
+	 * 
+	 * @throws ServletException
+	 *             if an error occurs
 	 */
 	public void init() throws ServletException {
 		// Put your code here

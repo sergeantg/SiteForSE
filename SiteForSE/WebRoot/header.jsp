@@ -4,7 +4,7 @@
 	<div class="navbar-inner">
 		<div class="container">
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="btnTitle">Menu</span>
+				<span class="btnTitle">菜单</span>
 				<span class="icon-chevron-down icon-white"></span>
 			</a>
 			<a class="brand" href="index.jsp" title="Home"><img src="img/content/logo.png" alt="mentor" /></a>

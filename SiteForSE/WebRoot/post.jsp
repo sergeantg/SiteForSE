@@ -4,7 +4,7 @@
 <html>
 <head>
 <%@include file="head.jsp"%></head>
-
+<title>发帖</title>>
 <body>
     <%@include file="header.jsp"%>
     <section class="mainContentWrap">
@@ -17,7 +17,7 @@
             </div>
 
 
-            <form id="newPost" class="form" action="PostServelt" method="post">
+            <form id="newPost" class="form" action="PostServlet" method="post">
                 <div class="row-fluid">
                     <div class="span2">标题</div>
                             <div class="span10">

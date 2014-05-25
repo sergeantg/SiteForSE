@@ -5,6 +5,7 @@
 
 <head>
 <%@include file="head.jsp"%>
+<title>教师介绍</title>
 </head>
 
 <body>
