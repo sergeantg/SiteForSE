@@ -17,7 +17,7 @@ public class VideoDao extends BaseDao {
 			query();
 			while (rs.next()) {
 				list.add(new Video(rs.getInt("VIDEO_ID"), rs.getString("NAME"),
-						rs.getTimestamp("ADD_DATE"), rs.getString("PATH")));
+						rs.getDate("ADD_DATE"), rs.getString("PATH")));
 
 			}
 		} catch (SQLException e) {
@@ -39,7 +39,7 @@ public class VideoDao extends BaseDao {
 			query();
 			while (rs.next()) {
 				return new Video(rs.getInt("VIDEO_ID"), rs.getString("NAME"),
-						rs.getTimestamp("ADD_DATE"), rs.getString("PATH"));
+						rs.getDate("ADD_DATE"), rs.getString("PATH"));
 
 			}
 		} catch (SQLException e) {
@@ -52,13 +52,13 @@ public class VideoDao extends BaseDao {
 
 	public int add(Video video) {
 		int count = 0;
-		sql = "insert into video (NAME, ADD_TIME, PATH) values(?, ?, ?)";
+		sql = "insert into video (NAME, ADD_DATE, PATH) values(?, ?, ?)";
 		openConn();
 		createPst(sql);
 
 		try {
 			pst.setString(1, video.getName());
-			pst.setTimestamp(2, video.getAddTime());
+			pst.setDate(2, video.getAddDate());
 			pst.setString(3, video.getPath());
 
 			count = update();

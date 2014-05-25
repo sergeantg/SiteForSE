@@ -12,6 +12,10 @@
 
 	<section class="mainContentWrap">
 		<div class="container mainContent">
+		<ul class="breadcrumb">
+				<li><a >视频观看</a> <span class="divider">/</span>
+				</li>
+			</ul>
 			<div class="row-fluid">
 
 				<div  id="video" class="span12" align ="center">
@@ -52,8 +56,8 @@
 
 */
 
-        // document.getElementById("tudou").src="http://player.youku.com/embed/XNzEwNzY4NzUy";
-        // document.getElementById("tudou").height=document.body.clientWidth/2.2;
+        document.getElementById("tudou").src="http://player.youku.com/embed/XNzEwNzY4NzUy";
+        document.getElementById("tudou").height=document.body.clientWidth/2.2;
 
         // var nvideo=document.createElement("video");
         // var src1=document.createElement("source");

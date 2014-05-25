@@ -69,9 +69,9 @@ public class DelVideoServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		VideoBiz biz = new VideoBiz();
 		int id = 0;
-		if (request.getParameter("id") != null
-				&& request.getParameter("id") != "")
-			id = Integer.parseInt(request.getParameter("id"));
+		if (request.getParameter("videoID") != null
+				&& request.getParameter("videoID") != "")
+			id = Integer.parseInt(request.getParameter("videoID"));
 		if (biz.del(id) == 1) {
 			out.print("<script type='text/javascript'>"
 					+ "var msg='删除成功！';window.alert(msg);window.document.location.href='videoList.jsp';"

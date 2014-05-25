@@ -1,19 +1,19 @@
 package com.siteforse.entity;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 public class Video {
 
 	private int videoID;
 	private String name;
-	private Timestamp addTime;
+	private Date addDate;
 	private String path;
 
-	public Video(int videoID, String name, Timestamp addTime, String path) {
+	public Video(int videoID, String name, Date addDate, String path) {
 		super();
 		this.videoID = videoID;
 		this.name = name;
-		this.addTime = addTime;
+		this.addDate = addDate;
 		this.path = path;
 	}
 
@@ -33,12 +33,12 @@ public class Video {
 		this.name = name;
 	}
 
-	public Timestamp getAddTime() {
-		return addTime;
+	public Date getAddDate() {
+		return addDate;
 	}
 
-	public void setAddTime(Timestamp addTime) {
-		this.addTime = addTime;
+	public void setAddDate(Date addDate) {
+		this.addDate = addDate;
 	}
 
 	public String getPath() {
