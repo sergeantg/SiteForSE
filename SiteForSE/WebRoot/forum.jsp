@@ -91,5 +91,13 @@
 		</ul>
 
 	</section>
-	<%@include file="footer.jsp"%></body>
+	<%@include file="footer.jsp"%>
+
+	<!-- import minified javascript -->
+    <script type="text/javascript" src="js/mentor.min.js"></script>
+    <script type="text/javascript" src="preview/preview.js"></script>
+
+</body>
+
+
 </html>

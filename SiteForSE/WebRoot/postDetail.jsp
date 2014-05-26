@@ -55,8 +55,8 @@
 				<!--end share buttons-->
 			</div>
 			<div class="row-fluid" id="comments">
-				<div class="well">
-					<div class="span12 commentsWrap">
+				<div class="span12 commentsWrap">
+					<div class="well">
 
 						<!--title-->
 						<div class="row-fluid">
@@ -71,7 +71,12 @@
 									<!--comment body-->
 									<div class="row-fluid comment-body">
 										<div class="span1 comment-author vcard">
-											<img class="avatar" src="img/content/avatar.jpg" alt="avatar">
+											<c:if test="${item.uid==1}">
+											<img class="avatar" src="img/content/admin.jpg" alt="admin">
+											</c:if>
+											<c:if test="${item.uid==0}">
+											<img class="avatar" src="img/content/user.jpg" alt="user">
+											</c:if>
 										</div>
 
 										<div class="span11">
@@ -90,7 +95,12 @@
 							</c:forEach>
 						</ul>
 						<!--end commentlist-->
+					</div>
 
+
+
+
+                    <div class="well">
 						<div id="respond">
 							<div class="row-fluid">
 								<div class="span12">
@@ -106,10 +116,10 @@
 
 										<div class="comment-form-comment control-group">
 											<div class="controls">
-												<textarea class="span7" id="comment" name="content"
-													cols="45" rows="8" aria-required="true"
+												<textarea class="neirong" id="comment" name="content"
+													cols="64" rows="8" aria-required="true"
 													placeholder="评论内容.."
-													style="margin: 0px; width: 530px; height: 228px;"></textarea>
+													style="margin: 0px; width: 100%; height: 228px;"></textarea>
 											</div>
 											<!--<label class="control-label" for="comment">Comment</label>-->
 										</div>
@@ -128,11 +138,10 @@
 						</div>
 						<!--end respond-->
 
-					</div>
+					</div> 
 					<!--end comments wrap-->
 				</div>
 			</div>
-		</div>
 		</div>
 	</section>
 	<%@include file="footer.jsp"%>

@@ -8594,7 +8594,7 @@ iframe.videoWrapper
 	}
 
 	#commentform div.controls {
-		width: 120px
+		width: 100%
 	}
 
 	.form-horizontal .control-group>label {
