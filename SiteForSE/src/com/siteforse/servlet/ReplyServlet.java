@@ -80,7 +80,7 @@ public class ReplyServlet extends HttpServlet {
 		PostBiz biz = new PostBiz();
 		if (biz.addReply(postID, content) == 1) {
 			// out.print("y");
-			out.print("<script type='text/javascript'>window.alert('发表成功！');"
+			out.print("<script type='text/javascript'>"
 					+ "window.document.location.href='postDetail.jsp?postID="
 					+ postID + "';</script>");
 		} else

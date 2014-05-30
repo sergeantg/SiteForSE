@@ -24,6 +24,11 @@
 	<%@include file="header.jsp"%>
 	<section class="mainContentWrap">
 		<div class="container mainContent">
+			<ul class="breadcrumb">
+				<li><a href="forum.jsp">互动中心</a> <span class="divider">/</span></li>
+				<li><a>帖子详情</a>
+				</li>
+			</ul>
 			<div class="row-fluid">
 				<div class="span12 post full">
 					<div class="well">

@@ -37,6 +37,19 @@
 					<a class="btn btn-large btn-info" href="post.jsp"> <i
 						class="icon-pencil icon-white"></i> 发新帖 </a>
 				</div>
+
+				<div class="psearch">
+					<div class="row-fluid body-search">
+						<div class="span12 widget_search">
+							<form class="form-inline" action="#" method="get" role="search">
+								<input type="text" class="input-medium span3"
+									placeholder="Search...">
+								<button class="icon-search" type="submit"></button>
+							</form>
+						</div>
+					</div>
+				</div>
+
 			</div>
 
 			<ul class="discuss_list">

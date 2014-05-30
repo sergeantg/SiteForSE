@@ -65,9 +65,9 @@ public class AdminLoginServlet extends HttpServlet {
 		if((psw!=null)&&(biz.validate(psw)==1)){
 			
 			request.getSession().setAttribute("login", "y");
-			request.getRequestDispatcher("/admin/docList.jsp").forward(request, response);
+			request.getRequestDispatcher("/admin/docList.jsp");
 		}else{
-			request.getRequestDispatcher("/admin/login.jsp").forward(request, response);
+			request.getRequestDispatcher("/admin/login.jsp");
 		}
 	}
 

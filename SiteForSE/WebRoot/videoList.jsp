@@ -32,6 +32,9 @@
 	<!--main content-->
 	<section class="mainContentWrap">
 		<div class="container mainContent">
+			<ul class="breadcrumb">
+				<li><a>课程视频</a></li>
+			</ul>
 			<div class="row-fluid">
 				<div class="span12">
 					<h3>视频列表</h3>

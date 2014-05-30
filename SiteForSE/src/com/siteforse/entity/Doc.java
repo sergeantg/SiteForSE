@@ -1,14 +1,14 @@
 package com.siteforse.entity;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 public class Doc {
 	private int docID;
 	private String name;
-	private Timestamp addDate;
+	private Date addDate;
 	private String path;
 
-	public Doc(int docID, String name, Timestamp addDate, String path) {
+	public Doc(int docID, String name, Date addDate, String path) {
 		super();
 		this.docID = docID;
 		this.name = name;
@@ -36,11 +36,11 @@ public class Doc {
 		this.name = name;
 	}
 
-	public Timestamp getAddDate() {
+	public Date getAddDate() {
 		return addDate;
 	}
 
-	public void setAddDate(Timestamp addDate) {
+	public void setAddDate(Date addDate) {
 		this.addDate = addDate;
 	}
 

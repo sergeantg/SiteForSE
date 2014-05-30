@@ -1,7 +1,6 @@
 package com.siteforse.dao;
 
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 
 import com.siteforse.entity.Doc;
@@ -10,7 +9,7 @@ public class DocDao extends BaseDao {
 	ArrayList<Doc> list = new ArrayList<Doc>();
 
 	public ArrayList<Doc> getDoc(int docID) {
-		sql = "SELECT * FROM doc WHERE DOC_ID=?";
+		sql = "SELECT * FROM doc WHERE DOC_ID=? ORDER BY ADD_DATE DESC";
 		openConn();
 		createPst(sql);
 
@@ -19,7 +18,7 @@ public class DocDao extends BaseDao {
 			query();
 			while (rs.next()) {
 				list.add(new Doc(rs.getInt("DOC_ID"), rs.getString("NAME"), rs
-						.getTimestamp("ADD_DATE"), rs.getString("PATH")));
+						.getDate("ADD_DATE"), rs.getString("PATH")));
 
 			}
 		} catch (SQLException e) {
@@ -38,7 +37,7 @@ public class DocDao extends BaseDao {
 			query();
 			while (rs.next()) {
 				list.add(new Doc(rs.getInt("DOC_ID"), rs.getString("NAME"), rs
-						.getTimestamp("ADD_DATE"), rs.getString("PATH")));
+						.getDate("ADD_DATE"), rs.getString("PATH")));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -69,7 +68,7 @@ public class DocDao extends BaseDao {
 	}
 	
 	public ArrayList<Doc> getAllByPage(int index, int pageSize) {
-		sql = "SELECT * FROM doc LIMIT ?,?";
+		sql = "SELECT * FROM doc ORDER BY ADD_DATE DESC LIMIT ?,?";
 		openConn();
 		createPst(sql);
 		try {
@@ -78,7 +77,7 @@ public class DocDao extends BaseDao {
 			query();
 			while (rs.next()) {
 				list.add(new Doc(rs.getInt("DOC_ID"), rs.getString("NAME"), rs
-						.getTimestamp("ADD_DATE"), rs.getString("PATH")));
+						.getDate("ADD_DATE"), rs.getString("PATH")));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -96,7 +95,7 @@ public class DocDao extends BaseDao {
 
 		try {
 			pst.setString(1, doc.getName());
-			pst.setTimestamp(2, doc.getAddDate());
+			pst.setDate(2, doc.getAddDate());
 			pst.setString(3, doc.getPath());
 
 			count = update();

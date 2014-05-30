@@ -35,7 +35,9 @@
 	<!--main content-->
 	<section class="mainContentWrap">
 		<div class="container mainContent">
-
+			<ul class="breadcrumb">
+				<li><a>课程课件</a></li>
+			</ul>
 			<div class="row-fluid">
 				<div class="span12">
 					<h3>课件列表</h3>

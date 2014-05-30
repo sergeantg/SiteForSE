@@ -1,6 +1,6 @@
 package com.siteforse.biz;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 import java.util.ArrayList;
 
 import com.siteforse.dao.*;
@@ -38,7 +38,7 @@ public class DocBiz {
 	}
 	
 	public int add(Doc doc){
-		doc.setAddDate(new Timestamp(System.currentTimeMillis()));
+		doc.setAddDate(new Date(System.currentTimeMillis()));
 		return dao.add(doc);
 	}
 	

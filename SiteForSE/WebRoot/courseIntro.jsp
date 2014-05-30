@@ -15,9 +15,8 @@
 	<section class="mainContentWrap">
 		<div class="container mainContent">
 			<ul class="breadcrumb">
-				<li><a href="#">关于</a> <span class="divider">/</span></li>
-				<li><a href="courseIntro.jsp">课程介绍</a> <span class="divider">/</span>
-				</li>
+				<li><a>关于</a> <span class="divider">/</span></li>
+				<li><a>课程介绍</a></li>
 			</ul>
 
 			<div class="row-fluid">

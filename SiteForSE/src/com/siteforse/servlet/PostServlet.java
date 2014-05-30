@@ -69,7 +69,7 @@ public class PostServlet extends HttpServlet {
 		}
 		PostBiz biz = new PostBiz();
 		if (biz.addPost(title, content) == 1) {
-			out.print("<script type='text/javascript'>window.alert('发表成功！');"
+			out.print("<script type='text/javascript'>"
 					+ "window.document.location.href='forum.jsp';</script>");
 		} else
 			out.print("<script type='text/javascript'>window.alert('发表失败！');"

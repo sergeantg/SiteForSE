@@ -11,7 +11,7 @@ public class PostDao extends BaseDao {
 	private ArrayList<Reply> rlist = new ArrayList<Reply>();
 
 	public ArrayList<Post> get(int ID) {
-		sql = "SELECT * FROM post WHERE POST_ID=?";
+		sql = "SELECT * FROM post WHERE POST_ID=? ORDER BY POST_TIME DESC";
 		openConn();
 		createPst(sql);
 
@@ -53,7 +53,7 @@ public class PostDao extends BaseDao {
 	}
 	
 	public ArrayList<Post> getOverview(int ID) {
-		sql = "SELECT * FROM post WHERE POST_ID=?";
+		sql = "SELECT * FROM post WHERE POST_ID=? ORDER BY POST_TIME DESC";
 		openConn();
 		createPst(sql);
 
@@ -75,7 +75,7 @@ public class PostDao extends BaseDao {
 	}
 
 	public ArrayList<Post> getAll() {
-		sql = "SELECT * FROM post";
+		sql = "SELECT * FROM post ORDER BY POST_TIME DESC";
 		openConn();
 		createPst(sql);
 
@@ -96,7 +96,7 @@ public class PostDao extends BaseDao {
 	}
 
 	public ArrayList<Post> getAllByPage(int index, int pageSize) {
-		sql = "SELECT * FROM post LIMIT ?,?";
+		sql = "SELECT * FROM post ORDER BY POST_TIME DESC LIMIT ?,?";
 		openConn();
 		createPst(sql);
 
@@ -119,7 +119,7 @@ public class PostDao extends BaseDao {
 	}
 	
 	public ArrayList<Reply> getReply(int ID) {
-		sql = "SELECT * FROM reply WHERE POST_ID=?";
+		sql = "SELECT * FROM reply WHERE POST_ID=? ORDER BY POST_TIME DESC";
 		openConn();
 		createPst(sql);
 

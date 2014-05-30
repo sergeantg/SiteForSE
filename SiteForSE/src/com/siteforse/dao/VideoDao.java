@@ -9,7 +9,7 @@ public class VideoDao extends BaseDao {
 	ArrayList<Video> list = new ArrayList<Video>();
 
 	public ArrayList<Video> getList() {
-		sql = "SELECT * FROM video";
+		sql = "SELECT * FROM video ORDER BY ADD_DATE DESC";
 		openConn();
 		createPst(sql);
 
@@ -29,7 +29,7 @@ public class VideoDao extends BaseDao {
 	}
 
 	public ArrayList<Video> getAllByPage(int index, int pageSize) {
-		sql = "SELECT * FROM video LIMIT ?,?";
+		sql = "SELECT * FROM video ORDER BY ADD_DATE DESC LIMIT ?,?";
 		openConn();
 		createPst(sql);
 
