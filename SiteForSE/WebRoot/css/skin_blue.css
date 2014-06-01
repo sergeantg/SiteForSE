@@ -69,7 +69,7 @@
     }
     
     footer p{
-        color:#000000;
+        color:#FFFFFF;
     }
     
     a
@@ -117,6 +117,9 @@
     /*width: 580px;*/
 }
 
+    .zoom{
+        font-size: 28px;
+    }
 
     }
     
@@ -332,7 +335,7 @@
     
     .navbar .nav > li > a{
         font-family:"微软雅黑",helvetica, arial, verdana, sans-serif;
-        color:#979795;
+        color:#C0C0BE;
         font-size:20px;
         text-shadow: none;
         border-bottom:2px solid #c8e6e0;
@@ -1097,11 +1100,11 @@
     }
     
     .copyright p{
-        color:#000000;
+        color:#FFFFFF;
     }
     
     .footerLower .footNav a{
-        color:#000000;
+        color:#FFFFFF;
     }
     
     .footerLower .footNav span{

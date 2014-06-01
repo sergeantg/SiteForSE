@@ -33,8 +33,6 @@
 									教师介绍</a></li>
 							<li class="active"><a href="textbookIntro.jsp"><i
 									class="icon-book"></i> 教材简介</a></li>
-							<li><a href="courseIntro.jsp"><i class="icon-star"></i> 课程简介</a>
-							</li>
 							<li><a href="about.jsp"><i
 									class="icon-info-sign"></i> About Us</a></li>
 							<li class="divider"></li>

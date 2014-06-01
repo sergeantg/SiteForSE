@@ -21,7 +21,6 @@
 						<ul class="dropdown-menu">
 							<li><a href="teacherIntro.jsp">教师介绍</a></li>
 							<li><a href="textbookIntro.jsp">教材介绍</a></li>
-							<li><a href="courseIntro.jsp">课程简介</a></li>
 						</ul>
 					</li>
 				</ul>
