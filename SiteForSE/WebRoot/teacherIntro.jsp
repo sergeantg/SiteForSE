@@ -17,7 +17,7 @@
 			
 			<ul class="breadcrumb">
 				<li><a>关于</a> <span class="divider">/</span></li>
-				<li><a href="teacherIntro.jsp">教师介绍</a></li>
+				<li><a>教师介绍</a></li>
 			</ul>
 
 

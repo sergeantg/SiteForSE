@@ -91,7 +91,7 @@
 											</c:if>
 											</cite>
 											<div class="comment-meta">
-												<a href="#">${item.postTime}</a>
+												<a>${item.postTime}</a>
 											</div>
 											<p>${item.content }</p>
 										</div>

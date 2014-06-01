@@ -16,6 +16,7 @@
 					<li><a href="videoList.jsp">课程视频</a></li>
 					<li><a href="docList.jsp">课程课件</a></li>
 					<li><a href="forum.jsp">互动中心</a></li>
+					<li><a href="test1.jsp">课程练习</a></li>
 					<li class="dropdown">
 						<a href="#">关于<b class="caret"></b></a>
 						<ul class="dropdown-menu">

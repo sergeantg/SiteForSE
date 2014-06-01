@@ -15,8 +15,8 @@
 	<section class="mainContentWrap">
 		<div class="container mainContent">
 			<ul class="breadcrumb">
-				<li><a href="#">关于</a> <span class="divider">/</span></li>
-				<li><a href="texbookIntro.jsp">教材简介</a></li>
+				<li><a>关于</a> <span class="divider">/</span></li>
+				<li><a>教材简介</a></li>
 			</ul>
 
 			<div class="row-fluid">

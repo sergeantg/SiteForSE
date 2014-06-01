@@ -11,7 +11,7 @@
         <div class="container mainContent">
             <ul class="breadcrumb">
                 <li><a href="forum.jsp">互动中心</a> <span class="divider">/</span></li>
-                <li><a href="#">发帖</a></li>
+                <li><a>发帖</a></li>
             </ul>
             <div class="row-fluid">
                 <div class="span2">&nbsp</div>

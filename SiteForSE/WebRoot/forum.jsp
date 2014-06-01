@@ -30,7 +30,7 @@
 	<section class="mainContentWrap">
 		<div class="container mainContent">
 			<ul class="breadcrumb">
-				<li><a href="#">互动中心</a></li>
+				<li><a>互动中心</a></li>
 			</ul>
 			<div class="row-fluid">
 				<div class="newpost">
