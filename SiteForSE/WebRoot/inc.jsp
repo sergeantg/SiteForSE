@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
-<%@ page import="com.sina.util.SaeUserInfo"%>
+<%@ page import="com.sina.sae.util.SaeUserInfo"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
