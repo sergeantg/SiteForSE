@@ -80,7 +80,7 @@ public class DocUploadServlet extends HttpServlet {
 		DocBiz biz = new DocBiz();
 		Doc doc = new Doc();
 		PrintWriter out = response.getWriter();
-		response.setCharacterEncoding("UTF-8");
+		
 
 		File saveDir = UploadImg.upImgSaveDir(request, "doc/upload");
 		File tempDir = UploadImg.upImgTempDir(request, "doc/temp");

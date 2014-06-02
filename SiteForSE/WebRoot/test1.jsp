@@ -1,19 +1,23 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ include file="inc.jsp"%>
+<%@include file="head.jsp"%>
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<base href="<%=basePath%>">
+
+
 
 <title>课程测试</title>
 
 </head>
 
-<body style="background:url('image/3.jpg') no-repeat;">
-	
-	<div id="div1" style="position: absolute; left: 370px; top: 0px;">
+<body >
+    
+	<div class="container mainContent">
+		<div class="row-fluid">
+	<div class="span9">
 		<a href="index.jsp">返回</a>
 		<form action="proc.jsp" method="post">
 			<%
@@ -42,9 +46,13 @@
 				}
 			%>
 
-			<br> <input type="submit" name="n" value="提交">
-			<a href="index.jsp">返回</a>
+			<br> <input type="submit" name="n" class="btn btn-info btn-large" value="提交">
+			<a href="index.jsp" class="btn btn-success btn-large">返回</a>
 
 		</form>
+	</div>
+</div>
+
+</div>
 </body>
 </html>

@@ -12,8 +12,10 @@
 </head>
 
 <body>
-	<div id="div2"
-		style="position: absolute; left: 500px; top: 15px; width:180px; height:180px; border:2px dashed #000;">
+	<div class="container mainContent">
+	<div class="row-fluid">
+	<div class="span9">
+	<div id="div2" style="width:180px; height:185px; border:2px dashed #000;margin-bottom:10px;">
 		<%
 			rs.beforeFirst();
 			for (int i = 0; i < 10; i++) {
@@ -39,6 +41,9 @@
 			}
 		%>
 	</div>
+</div>
+</div>
+</div>
 
 </body>
 </html>

@@ -56,7 +56,7 @@
 										href="js/web/viewer.jsp?p=${item.path}" target="_blank">${item.name }</a>
 									</td>
 									<td>${item.addDate}</td>
-									<td><a href="<%=basePath%>${item.path}">下载</a></td>
+									<td><a href="${item.path}">下载</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>

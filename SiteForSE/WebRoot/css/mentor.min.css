@@ -1166,7 +1166,7 @@ label {
 }
 
 input,textarea,select,.uneditable-input {
-	font-family: "寰蒋闆呴粦";
+	font-family: "微软雅黑";
 	display: inline-block;
 	width: 100%;
 	height: 40px;
@@ -2800,7 +2800,7 @@ table .span24 {
 .input-large {
 	padding: 9px 14px;
 	font-size: 15px;
-	font-family: "寰蒋闆呴粦";
+	font-family: "微软雅黑";
 	line-height: normal;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -7604,7 +7604,7 @@ input:focus,textarea:focus {
 }
 
 footer {
-	margin-top: 60px; /*鏈夌偣澶�/
+	margin-top: 60px; /*有点大*/
 	border-top: 1px solid #e3e3e3;
 	background: #fff
 }
