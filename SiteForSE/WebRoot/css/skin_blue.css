@@ -1201,6 +1201,10 @@
         .widget_stats a span{
             font-size:11px;
         }
+
+        .navbar .brand{
+            background:url(../img/content/logo_mi.png) no-repeat;
+        }
         
 		/*menu*/
         

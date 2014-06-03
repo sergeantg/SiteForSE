@@ -44,13 +44,13 @@
 							<div class="mws-form-row">
 								<label>课件名</label>
 								<div class="mws-form-item large">
-									<input type="text" name="name" class="mws-textinput small" />
+									<input type="text" placeholder="只能上传pdf文件"  name="name" class="mws-textinput small" />
 								</div>
 							</div>
 							<div class="mws-form-row">
 								<label>选择</label>
 								<div class="mws-form-item large">
-									<input type="file" name="doc" />
+									<input  type="file" name="doc"  />
 								</div>
 							</div>
 							<div class="mws-button-row">
