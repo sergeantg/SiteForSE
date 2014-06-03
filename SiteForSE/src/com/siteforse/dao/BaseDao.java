@@ -9,13 +9,13 @@ import java.sql.SQLException;
 import com.sina.sae.util.SaeUserInfo;
 
 public abstract class BaseDao {
-	private static final String USER =SaeUserInfo.getAccessKey();
-	private static final String PWD =SaeUserInfo.getSecretKey();
-	private static final String URL = "jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_siteforse?characterEncoding=utf8";
+	//private static final String USER =SaeUserInfo.getAccessKey();
+	//private static final String PWD =SaeUserInfo.getSecretKey();
+	//private static final String URL = "jdbc:mysql://w.rdc.sae.sina.com.cn:3307/app_siteforse?characterEncoding=utf8";
 	private static final String DRIVER = "com.mysql.jdbc.Driver";
-	//private static final String URL = "jdbc:mysql://localhost:3306/siteforse?characterEncoding=utf8";
-	//private static final String USER = "root";
-	//private static final String PWD = "123456";
+	private static final String URL = "jdbc:mysql://localhost:3306/siteforse?characterEncoding=utf8";
+	private static final String USER = "root";
+	private static final String PWD = "123456";
 
 	protected String sql;
 	protected Connection conn;
